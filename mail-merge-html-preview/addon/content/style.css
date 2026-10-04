@@ -1,0 +1,486 @@
+@media (prefers-color-scheme: dark) {
+	html {
+		filter: invert(90%) hue-rotate(180deg);
+	}
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	overflow: hidden scroll;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+a:after {
+	content: url('/skin/external-link-alt.svg');
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	margin-left: 4px;
+}
+
+.tab.active {
+	display: block;
+}
+
+.tab {
+	display: none;
+	position: relative;
+}
+
+.tab .header {
+	display: flex;
+	flex-direction: row;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 64px;
+	margin: 0px;
+	padding: 16px;
+	background: #eee;
+	font-size: 32px;
+	line-height: 32px;
+	white-space: nowrap;
+}
+
+.tab .header .title {
+	padding-left: 16px;
+}
+
+.tab .header :last-child {
+	width: 32px;
+	height: 32px;
+	border: none;
+	background: inherit;
+	background-color: transparent;
+	background-image: url('/skin/times.svg');
+	background-repeat: no-repeat;
+	background-size: 32px 32px;
+	color: transparent;
+}
+
+.tab .header :last-child:hover {
+	cursor: pointer;
+}
+
+.tab .content {
+	min-height: 100vh;
+	margin: 0px 0px;
+	padding: 64px 0px;
+	background: #fff;
+	white-space: nowrap;
+}
+
+.tab .content .section {
+	margin: 24px 16px;
+	padding: 0px 0px;
+	border: 2px solid #ccc;
+	border-radius: 8px;
+}
+
+.tab .content .warning {
+	border-color: #c00;
+}
+
+.tab .content .title {
+	width: fit-content;
+	margin: -12px 8px 0px;
+	padding: 0px 8px;
+	background: #fff;
+	font-weight: bold;
+}
+
+.tab .content .container {
+	margin: 16px 16px;
+	padding: 0px 0px;
+}
+
+.tab .content .container div {
+	margin: 16px 0px;
+	padding: 0px 0px;
+}
+
+.tab .content .container div span {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.tab .content .container div span:nth-child(1) {
+	width: 256px;
+	text-align: right;
+}
+
+.tab .content .container div span:nth-child(2) {
+	width: 32px;
+	text-align: center;
+}
+
+.tab .content .container div span:nth-child(3) {
+	overflow: auto;
+	width: calc(100% - 256px - 32px - 8px);
+	text-align: left;
+}
+
+.tab .content .container div span input[type='number'] {
+	appearance: textfield;
+	width: 64px;
+	text-align: center;
+}
+
+.tab .content .container div span button {
+	width: 32px;
+	text-align: center;
+}
+
+.tab .content .container div span textarea {
+	width: 256px;
+}
+
+.tab .content .container div table {
+	display: block;
+	overflow: auto;
+	border-collapse: collapse;
+}
+
+.tab .content .container div table tr:nth-child(1) {
+	font-weight: bold;
+}
+
+.tab .content .container div table td {
+	box-sizing: content-box;
+	width: 24px;
+	height: 24px;
+	padding: 2px;
+	border: 1px solid #999;
+}
+
+.tab .footer {
+	display: flex;
+	flex-direction: row;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 64px;
+	margin: 0px;
+	padding: 16px;
+	background: #eee;
+	white-space: nowrap;
+}
+
+.tab .footer button {
+	height: 32px;
+}
+
+.tab .footer input {
+	height: 32px;
+}
+
+.error.active {
+	display: block;
+}
+
+.error {
+	display: none;
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	margin: 0px;
+	padding: 0px;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 1;
+}
+
+.error .alert.active {
+	display: flex;
+	flex-direction: column;
+}
+
+.error .alert {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 512px;
+	height: 256px;
+	margin: -128px -256px;
+	background: white;
+}
+
+.error .confirm.active {
+	display: flex;
+	flex-direction: column;
+}
+
+.error .confirm {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 512px;
+	height: 256px;
+	margin: -128px -256px;
+	background: white;
+}
+
+.error .header {
+	display: flex;
+	flex-direction: row;
+	width: 512px;
+	height: 64px;
+	margin: 0px;
+	padding: 16px;
+	background: #eee;
+	font-size: 32px;
+	line-height: 32px;
+	white-space: nowrap;
+}
+
+.error .header .title {
+	padding-left: 16px;
+}
+
+.error .content {
+	position: unset;
+	width: 512px;
+	height: 128px;
+	margin: 0px;
+	padding: 0px;
+	background: white;
+	min-height: unset;
+}
+
+.error .content .container {
+	margin: 16px 16px;
+	padding: 0px 0px;
+}
+
+.error .footer {
+	display: flex;
+	flex-direction: row;
+	width: 512px;
+	height: 64px;
+	margin: 0px;
+	padding: 16px;
+	background: #eee;
+	white-space: nowrap;
+}
+
+.error .footer button {
+	height: 32px;
+}
+
+#mailmerge-dialog-batch-pause-random:disabled + label {
+	color: GrayText;
+}
+
+#mailmerge-about .content div span {
+	display: block;
+}
+
+#mailmerge-message .footer button {
+	width: 32px;
+}
+
+/* Local customization: rendered message preview (see html-preview.js). */
+
+#mailmerge-message .content {
+	display: flex;
+	flex-direction: column;
+	background: #f4f6f8;
+}
+
+#mailmerge-message .content .section {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	margin: 12px 16px;
+	border: 1px solid #d6dce3;
+	background: #fff;
+}
+
+#mailmerge-message .content .container {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	margin: 8px 16px 12px;
+}
+
+#mailmerge-message .content .container > div {
+	margin: 4px 0px;
+}
+
+#mailmerge-message .content .container > div > span:nth-child(1) {
+	width: 128px;
+	color: #526173;
+	text-align: left;
+	white-space: normal;
+}
+
+#mailmerge-message .content .container > div > span:nth-child(2) {
+	width: 8px;
+}
+
+#mailmerge-message .content .container > div > span:nth-child(3) {
+	width: calc(100% - 144px);
+}
+
+#mailmerge-message-subject {
+	font-weight: bold;
+}
+
+#mailmerge-message-customheaders {
+	max-height: 6em;
+}
+
+#mailmerge-message .content .container > .mailmerge-preview-row {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	margin: 8px 0px 0px;
+	white-space: normal;
+}
+
+.mailmerge-preview-bar {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	gap: 8px;
+	margin-bottom: 6px;
+}
+
+.mailmerge-preview-bar p {
+	margin: 0px;
+}
+
+.mailmerge-preview-tools {
+	display: flex;
+	gap: 6px;
+}
+
+.mailmerge-preview-tools button,
+#mailmerge-preview-notice button {
+	min-height: 26px;
+	padding: 2px 12px;
+	border: 1px solid #aab6c3;
+	border-radius: 5px;
+	background: #fff;
+	color: #202124;
+	cursor: pointer;
+}
+
+.mailmerge-preview-tools button[aria-pressed='true'] {
+	border-color: #3973c1;
+	background: #e8f0fe;
+}
+
+#mailmerge-preview-notice {
+	margin-bottom: 6px;
+	font-size: 0.9em;
+}
+
+#mailmerge-preview-notice p {
+	margin: 2px 0px;
+	padding: 3px 8px;
+	border-left: 4px solid #3973c1;
+	border-radius: 4px;
+	background: #eef3fb;
+	overflow-wrap: anywhere;
+}
+
+#mailmerge-preview-notice p.warning {
+	border-left-color: #c77700;
+	background: #fff4e0;
+}
+
+#mailmerge-preview-notice button {
+	min-height: 22px;
+	margin-left: 8px;
+	padding: 1px 10px;
+}
+
+#mailmerge-message-body {
+	display: block;
+	flex: 1;
+	width: 100%;
+	min-height: 200px;
+	border: 1px solid #d6dce3;
+	border-radius: 4px;
+	background: #fff;
+	color-scheme: light;
+}
+
+#mailmerge-message-body[data-viewport='mobile'] {
+	align-self: center;
+	width: 390px;
+	max-width: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+	
+	/* The dark mode filter at the top of this file would also invert the message preview, and no
+	   filter on the frame can undo it exactly. Filter every part of the page except the frame, and
+	   give the unfiltered containers the colors the filter would have produced. */
+	
+	html {
+		filter: none;
+		background: #191919;
+		color-scheme: dark;
+	}
+	
+	body {
+		color-scheme: light;
+		color: CanvasText;
+	}
+	
+	body > .tab:not(#mailmerge-message) > *,
+	.error > *,
+	#mailmerge-message > .header,
+	#mailmerge-message > .footer,
+	#mailmerge-message .content .container > div:not(.mailmerge-preview-row),
+	.mailmerge-preview-bar,
+	#mailmerge-preview-notice {
+		filter: invert(90%) hue-rotate(180deg);
+	}
+	
+	/* A filter makes a stacking context; keep the fixed bars above the scrolling content. */
+	.tab .header,
+	.tab .footer {
+		z-index: 1;
+	}
+	
+	.error {
+		background: rgba(230, 230, 230, 0.8);
+	}
+	
+	#mailmerge-message .content {
+		background: #202123;
+	}
+	
+	#mailmerge-message .content .section {
+		border-color: #32373c;
+		background: #191919;
+	}
+	
+	#mailmerge-message-body {
+		border-color: #32373c;
+	}
+	
+}
+
+#mailmerge-message .footer > span:nth-child(2) {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+}
+
+#mailmerge-message-total {
+	margin: 0px 8px;
+}

@@ -1,0 +1,564 @@
+<!doctype html>
+<html>
+<head>
+<title>Mail Merge</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+<script src="html-preview.js"></script>
+<script src="dialog.js"></script>
+<script src="xlsx.core.min.js"></script>
+</head>
+<body id="mailmerge">
+
+<div class="tab active" id="mailmerge-dialog">
+	
+	<div class="header">
+		
+		<img src="/skin/mail-bulk.svg">
+		<span class="title" data-i18n="mailmerge.dialog"></span>
+		<span style="flex: 1;"></span>
+		<button id="mailmerge-dialog-accept" style="display: none;"></button>
+		
+	</div>
+	
+	<div class="content">
+		
+		<div class="section">
+			
+			<div class="title" data-i18n="mailmerge.dialog.legend.source"></div>
+			
+			<div class="container" id="mailmerge-dialog-source-container">
+				<div>
+					<span id="mailmerge-dialog-source-label" data-i18n="mailmerge.dialog.source"></span>
+					<span></span>
+					<span><select id="mailmerge-dialog-source" aria-labelledby="mailmerge-dialog-source-label"></select></span>
+				</div>
+			</div>
+			
+			<div class="container" id="mailmerge-dialog-cardbook-container">
+				<div>
+					<span id="mailmerge-dialog-cardbook-addressbook-label" data-i18n="mailmerge.dialog.cardbook.addressbook"></span>
+					<span></span>
+					<span><select id="mailmerge-dialog-cardbook-addressbook" aria-labelledby="mailmerge-dialog-cardbook-addressbook-label"></select></span>
+				</div>
+			</div>
+			
+			<div class="container" id="mailmerge-dialog-addressbook-container">
+				<div>
+					<span id="mailmerge-dialog-addressbook-addressbook-label" data-i18n="mailmerge.dialog.addressbook.addressbook"></span>
+					<span></span>
+					<span><select id="mailmerge-dialog-addressbook-addressbook" aria-labelledby="mailmerge-dialog-addressbook-addressbook-label"></select></span>
+				</div>
+			</div>
+			
+			<div class="container" id="mailmerge-dialog-csv-container">
+				<div>
+					<span id="mailmerge-dialog-csv-file-label" data-i18n="mailmerge.dialog.csv.file"></span>
+					<span></span>
+					<span><input type="file" id="mailmerge-dialog-csv-file" aria-labelledby="mailmerge-dialog-csv-file-label" accept=".csv"></span>
+				</div>
+				<div>
+					<span id="mailmerge-dialog-csv-characterset-label" data-i18n="mailmerge.dialog.csv.characterset"></span>
+					<span></span>
+					<span><select id="mailmerge-dialog-csv-characterset" aria-labelledby="mailmerge-dialog-csv-characterset-label"></select></span>
+				</div>
+				<div>
+					<span id="mailmerge-dialog-csv-fielddelimiter-label" data-i18n="mailmerge.dialog.csv.fielddelimiter"></span>
+					<span></span>
+					<span><select id="mailmerge-dialog-csv-fielddelimiter" aria-labelledby="mailmerge-dialog-csv-fielddelimiter-label"></select></span>
+				</div>
+			</div>
+			
+			<div class="container" id="mailmerge-dialog-json-container">
+				<div>
+					<span id="mailmerge-dialog-json-file-label" data-i18n="mailmerge.dialog.json.file"></span>
+					<span></span>
+					<span><input type="file" id="mailmerge-dialog-json-file" aria-labelledby="mailmerge-dialog-json-file-label" accept=".json"></span>
+				</div>
+			</div>
+			
+			<div class="container" id="mailmerge-dialog-xlsx-container">
+				<div>
+					<span id="mailmerge-dialog-xlsx-file-label" data-i18n="mailmerge.dialog.xlsx.file"></span>
+					<span></span>
+					<span><input type="file" id="mailmerge-dialog-xlsx-file" aria-labelledby="mailmerge-dialog-xlsx-file-label" accept=".csv, .ods, .fods, .xls, .xlsx, .xlsm, .xlsb"></span>
+				</div>
+				<div>
+					<span id="mailmerge-dialog-xlsx-sheetname-label" data-i18n="mailmerge.dialog.xlsx.sheetname"></span>
+					<span><input type="checkbox" id="mailmerge-dialog-xlsx-sheetname-checkbox" aria-labelledby="mailmerge-dialog-xlsx-sheetname-label"></span>
+					<span><input type="text" id="mailmerge-dialog-xlsx-sheetname" aria-labelledby="mailmerge-dialog-xlsx-sheetname-label"></span>
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="section">
+			
+			<div class="title" data-i18n="mailmerge.dialog.legend.attachments"></div>
+			
+			<div class="container" id="mailmerge-dialog-attachments-container">
+				<div>
+					<span id="mailmerge-dialog-attachments-label" data-i18n="mailmerge.dialog.attachments.attachments"></span>
+					<span><input type="checkbox" id="mailmerge-dialog-attachments-checkbox" aria-labelledby="mailmerge-dialog-attachments-label"></span>
+					<span>
+						<input type="file" id="mailmerge-dialog-attachments-file" aria-labelledby="mailmerge-dialog-attachments-label" accept="" multiple>
+						<br><br>
+						<textarea id="mailmerge-dialog-attachments-attachments" aria-labelledby="mailmerge-dialog-attachments-label" rows="3"></textarea>
+					</span>
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="section">
+			
+			<div class="title" data-i18n="mailmerge.dialog.legend.batch"></div>
+			
+			<div class="container" id="mailmerge-dialog-batch-container">
+				<div>
+					<span id="mailmerge-dialog-batch-pause-label" data-i18n="mailmerge.dialog.batch.pause"></span>
+					<span><input type="checkbox" id="mailmerge-dialog-batch-pause-checkbox" aria-labelledby="mailmerge-dialog-batch-pause-label"></span>
+					<span>
+						<button id="mailmerge-dialog-batch-pause-minus">-</button>
+						<input type="number" id="mailmerge-dialog-batch-pause" aria-labelledby="mailmerge-dialog-batch-pause-label" min="1" required>
+						<button id="mailmerge-dialog-batch-pause-plus">+</button>
+						<input type="checkbox" id="mailmerge-dialog-batch-pause-random">
+						<label for="mailmerge-dialog-batch-pause-random" data-i18n="mailmerge.dialog.batch.pause.random"></label>
+					</span>
+				</div>
+				<div>
+					<span id="mailmerge-dialog-batch-start-label" data-i18n="mailmerge.dialog.batch.start"></span>
+					<span><input type="checkbox" id="mailmerge-dialog-batch-start-checkbox" aria-labelledby="mailmerge-dialog-batch-start-label"></span>
+					<span>
+						<button id="mailmerge-dialog-batch-start-minus">-</button>
+						<input type="number" id="mailmerge-dialog-batch-start" aria-labelledby="mailmerge-dialog-batch-start-label" min="1" required>
+						<button id="mailmerge-dialog-batch-start-plus">+</button>
+					</span>
+				</div>
+				<div>
+					<span id="mailmerge-dialog-batch-stop-label" data-i18n="mailmerge.dialog.batch.stop"></span>
+					<span><input type="checkbox" id="mailmerge-dialog-batch-stop-checkbox" aria-labelledby="mailmerge-dialog-batch-stop-label"></span>
+					<span>
+						<button id="mailmerge-dialog-batch-stop-minus">-</button>
+						<input type="number" id="mailmerge-dialog-batch-stop" aria-labelledby="mailmerge-dialog-batch-stop-label" min="1" required>
+						<button id="mailmerge-dialog-batch-stop-plus">+</button>
+					</span>
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="section">
+			
+			<div class="title" data-i18n="mailmerge.dialog.legend.send"></div>
+			
+			<div class="container" id="mailmerge-dialog-delivermode-container">
+				<div>
+					<span id="mailmerge-dialog-delivermode-label" data-i18n="mailmerge.dialog.delivermode"></span>
+					<span></span>
+					<span><select id="mailmerge-dialog-delivermode" aria-labelledby="mailmerge-dialog-delivermode-label"></select></span>
+				</div>
+			</div>
+			
+			<div class="container" id="mailmerge-dialog-sendlater-container">
+				<div>
+					<span id="mailmerge-dialog-sendlater-at-label" data-i18n="mailmerge.dialog.sendlater.at"></span>
+					<span><input type="checkbox" id="mailmerge-dialog-sendlater-at-checkbox" aria-labelledby="mailmerge-dialog-sendlater-at-label"></span>
+					<span><input type="text" id="mailmerge-dialog-sendlater-at" aria-labelledby="mailmerge-dialog-sendlater-at-label" placeholder="YYYY-MM-DD HH:MM"></span>
+				</div>
+				<div>
+					<span id="mailmerge-dialog-sendlater-recur-label" data-i18n="mailmerge.dialog.sendlater.recur"></span>
+					<span><input type="checkbox" id="mailmerge-dialog-sendlater-recur-checkbox" aria-labelledby="mailmerge-dialog-sendlater-recur-label"></span>
+					<span><select id="mailmerge-dialog-sendlater-recur" aria-labelledby="mailmerge-dialog-sendlater-recur-label"></select></span>
+				</div>
+				<div>
+					<span id="mailmerge-dialog-sendlater-every-label" data-i18n="mailmerge.dialog.sendlater.every"></span>
+					<span><input type="checkbox" id="mailmerge-dialog-sendlater-every-checkbox" aria-labelledby="mailmerge-dialog-sendlater-every-label"></span>
+					<span>
+						<button id="mailmerge-dialog-sendlater-every-minus">-</button>
+						<input type="number" id="mailmerge-dialog-sendlater-every" aria-labelledby="mailmerge-dialog-sendlater-every-label" min="1" required>
+						<button id="mailmerge-dialog-sendlater-every-plus">+</button>
+					</span>
+				</div>
+				<div>
+					<span id="mailmerge-dialog-sendlater-between-label" data-i18n="mailmerge.dialog.sendlater.between"></span>
+					<span><input type="checkbox" id="mailmerge-dialog-sendlater-between-checkbox" aria-labelledby="mailmerge-dialog-sendlater-between-label"></span>
+					<span><input type="text" id="mailmerge-dialog-sendlater-between" aria-labelledby="mailmerge-dialog-sendlater-between-label" placeholder="HH:MM HH:MM"></span>
+				</div>
+				<div>
+					<span id="mailmerge-dialog-sendlater-only-label" data-i18n="mailmerge.dialog.sendlater.only"></span>
+					<span><input type="checkbox" id="mailmerge-dialog-sendlater-only-checkbox" aria-labelledby="mailmerge-dialog-sendlater-only-label"></span>
+					<span><select id="mailmerge-dialog-sendlater-only" aria-labelledby="mailmerge-dialog-sendlater-only-label" size="7" multiple></select></span>
+				</div>
+				<div>
+					<span id="mailmerge-dialog-sendlater-until-label" data-i18n="mailmerge.dialog.sendlater.until"></span>
+					<span><input type="checkbox" id="mailmerge-dialog-sendlater-until-checkbox" aria-labelledby="mailmerge-dialog-sendlater-until-label"></span>
+					<span><input type="text" id="mailmerge-dialog-sendlater-until" aria-labelledby="mailmerge-dialog-sendlater-until-label" placeholder="YYYY-MM-DD HH:MM"></span>
+				</div>
+			</div>
+			
+		</div>
+		
+	</div>
+	
+	<div class="footer">
+		
+		<span>
+			<button id="mailmerge-dialog-about" data-i18n="mailmerge.dialog.about;title=mailmerge.dialog.about.title"></button>
+		</span>
+		<span style="flex: 1;"></span>
+		<span>
+			<button id="mailmerge-dialog-load" data-i18n="mailmerge.dialog.load;title=mailmerge.dialog.load.title"></button>
+			<button id="mailmerge-dialog-reset" data-i18n="mailmerge.dialog.reset;title=mailmerge.dialog.reset.title"></button>
+			<button id="mailmerge-dialog-save" data-i18n="mailmerge.dialog.save;title=mailmerge.dialog.save.title"></button>
+		</span>
+		<span style="flex: 1;"></span>
+		<span>
+			<button id="mailmerge-dialog-file" data-i18n="mailmerge.dialog.file;title=mailmerge.dialog.file.title"></button>
+			<button id="mailmerge-dialog-message" data-i18n="mailmerge.dialog.message;title=mailmerge.dialog.message.title"></button>
+			<button id="mailmerge-dialog-send" data-i18n="mailmerge.dialog.send;title=mailmerge.dialog.send.title"></button>
+		</span>
+		
+	</div>
+	
+</div>
+
+<div class="tab" id="mailmerge-about">
+	
+	<div class="header">
+		
+		<img src="/skin/info-circle.svg">
+		<span class="title" data-i18n="mailmerge.about"></span>
+		<span style="flex: 1;"></span>
+		<button id="mailmerge-about-accept"></button>
+		
+	</div>
+	
+	<div class="content">
+		
+		<div class="section">
+			
+			<div class="container">
+				<div>
+					<span style="display: inline; font-weight: bold; font-size: 150%;">Mail Merge</span>
+					<span>Create and Save or Send Multiple Individual and Personalized Messages from a Draft</span>
+				</div>
+				<div>
+					<span style="display: inline; font-weight: bold;" data-i18n="mailmerge.about.version"></span>
+					<span id="mailmerge-about-version"></span>
+				</div>
+				<div>
+					<span style="display: inline; font-weight: bold;" data-i18n="mailmerge.about.developer"></span>
+					<span>Alexander Bergmann</span>
+				</div>
+				<div>
+					<span style="display: inline; font-weight: bold;" data-i18n="mailmerge.about.support"></span>
+					<span><a href="mailto:myaddons@gmx.de">myaddons@gmx.de</a></span>
+				</div>
+				<div>
+					<span style="display: inline; font-weight: bold;" data-i18n="mailmerge.about.homepage"></span>
+					<span><a href="https://addons.thunderbird.net/addon/mail-merge/">https://addons.thunderbird.net/addon/mail-merge/</a></span>
+				</div>
+				<div>
+					<span style="display: inline; font-weight: bold;" data-i18n="mailmerge.about.changelog"></span>
+					<span><a href="https://addons.thunderbird.net/addon/mail-merge/versions/">https://addons.thunderbird.net/addon/mail-merge/versions/</a></span>
+				</div>
+				<div>
+					<span style="display: inline; font-weight: bold;" data-i18n="mailmerge.about.license"></span>
+					<span><a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU General Public License, Version 3.0</a></span>
+				</div>
+			</div>
+			
+		</div>
+		
+	</div>
+	
+	<div class="footer">
+		
+	</div>
+	
+</div>
+
+<div class="tab" id="mailmerge-file">
+	
+	<div class="header">
+		
+		<img src="/skin/file.svg">
+		<span class="title" data-i18n="mailmerge.file"></span>
+		<span style="flex: 1;"></span>
+		<button id="mailmerge-file-accept"></button>
+		
+	</div>
+	
+	<div class="content">
+		
+		<div class="section">
+			
+			<div class="title" id="mailmerge-file-name"></div>
+			
+			<div class="container">
+				<div>
+					<table id="mailmerge-file-table" style="white-space: pre;"></table>
+				</div>
+			</div>
+			
+		</div>
+		
+	</div>
+	
+	<div class="footer">
+		
+	</div>
+	
+</div>
+
+<div class="tab" id="mailmerge-message">
+	
+	<div class="header">
+		
+		<img src="/skin/envelope-open.svg">
+		<span class="title" data-i18n="mailmerge.message"></span>
+		<span style="flex: 1;"></span>
+		<button id="mailmerge-message-accept"></button>
+		
+	</div>
+	
+	<div class="content">
+		
+		<div class="section">
+			
+			<div class="container">
+				<div>
+					<span data-i18n="mailmerge.message.from"></span>
+					<span></span>
+					<span id="mailmerge-message-from" style="white-space: pre-wrap;"></span>
+				</div>
+				<div>
+					<span data-i18n="mailmerge.message.to"></span>
+					<span></span>
+					<span id="mailmerge-message-to" style="white-space: pre-wrap;"></span>
+				</div>
+				<div>
+					<span data-i18n="mailmerge.message.cc"></span>
+					<span></span>
+					<span id="mailmerge-message-cc" style="white-space: pre-wrap;"></span>
+				</div>
+				<div>
+					<span data-i18n="mailmerge.message.bcc"></span>
+					<span></span>
+					<span id="mailmerge-message-bcc" style="white-space: pre-wrap;"></span>
+				</div>
+				<div>
+					<span data-i18n="mailmerge.message.reply"></span>
+					<span></span>
+					<span id="mailmerge-message-reply" style="white-space: pre-wrap;"></span>
+				</div>
+				<div>
+					<span data-i18n="mailmerge.message.subject"></span>
+					<span></span>
+					<span id="mailmerge-message-subject" style="white-space: pre-wrap;"></span>
+				</div>
+				<div>
+					<span data-i18n="mailmerge.message.attachments"></span>
+					<span></span>
+					<span id="mailmerge-message-attachments" style="white-space: pre-wrap;"></span>
+				</div>
+				<div>
+					<span data-i18n="mailmerge.message.customheaders"></span>
+					<span></span>
+					<span id="mailmerge-message-customheaders" style="white-space: pre-wrap;"></span>
+				</div>
+				<div class="mailmerge-preview-row">
+					<section class="mailmerge-preview-bar">
+						<p data-i18n="mailmerge.message.body"></p>
+						<p class="mailmerge-preview-tools" role="group" data-i18n="aria-label=mailmerge.preview.tools">
+							<button type="button" id="mailmerge-preview-wide" aria-pressed="true" data-i18n="mailmerge.preview.wide"></button>
+							<button type="button" id="mailmerge-preview-mobile" aria-pressed="false" data-i18n="mailmerge.preview.mobile"></button>
+						</p>
+					</section>
+					<section id="mailmerge-preview-notice" aria-live="polite" hidden></section>
+					<iframe id="mailmerge-message-body" sandbox="" referrerpolicy="no-referrer" data-viewport="wide" data-i18n="title=mailmerge.preview.frame"></iframe>
+				</div>
+			</div>
+			
+		</div>
+		
+	</div>
+	
+	<div class="footer">
+		
+		<span style="flex: 1;"></span>
+		<span>
+			<button id="mailmerge-message-begin" data-i18n="mailmerge.message.begin;title=mailmerge.message.begin.title"></button>
+			<button id="mailmerge-message-previous" data-i18n="mailmerge.message.previous;title=mailmerge.message.previous.title"></button>
+			<input type="number" id="mailmerge-message-index" data-i18n="aria-label=mailmerge.message.index" style="appearance: textfield; width: 64px; text-align: center;" required>
+			<span id="mailmerge-message-total" aria-live="polite"></span>
+			<button id="mailmerge-message-next" data-i18n="mailmerge.message.next;title=mailmerge.message.next.title"></button>
+			<button id="mailmerge-message-end" data-i18n="mailmerge.message.end;title=mailmerge.message.end.title"></button>
+		</span>
+		<span style="flex: 1;"></span>
+		
+	</div>
+	
+</div>
+
+<div class="tab" id="mailmerge-send">
+	
+	<div class="header">
+		
+		<img src="/skin/envelope.svg">
+		<span class="title" data-i18n="mailmerge.send"></span>
+		<span style="flex: 1;"></span>
+		<button id="mailmerge-send-accept"></button>
+		
+	</div>
+	
+	<div class="content">
+		
+		<div class="section">
+			
+			<div class="container">
+				<div>
+					<span data-i18n="mailmerge.send.current"></span>
+					<span></span>
+					<span id="mailmerge-send-current"></span>
+				</div>
+				<div>
+					<span data-i18n="mailmerge.send.total"></span>
+					<span></span>
+					<span id="mailmerge-send-total"></span>
+				</div>
+				<div>
+					<span data-i18n="mailmerge.send.time"></span>
+					<span></span>
+					<span id="mailmerge-send-time"></span>
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="section warning" id="mailmerge-send-betawarning">
+			
+			<div class="title" data-i18n="mailmerge.betawarning.title"></div>
+			
+			<div class="container">
+				<div>
+					<div style="white-space: pre-wrap;" data-i18n="mailmerge.betawarning.message"></div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="section warning" id="mailmerge-send-encryptionwarning">
+			
+			<div class="title" data-i18n="mailmerge.encryptionwarning.title"></div>
+			
+			<div class="container">
+				<div>
+					<div style="white-space: pre-wrap;" data-i18n="mailmerge.encryptionwarning.message"></div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="section warning" id="mailmerge-send-delivermodewarning">
+			
+			<div class="title" data-i18n="mailmerge.delivermodewarning.title"></div>
+			
+			<div class="container">
+				<div>
+					<div style="white-space: pre-wrap;" data-i18n="mailmerge.delivermodewarning.message"></div>
+				</div>
+			</div>
+			
+		</div>
+		
+	</div>
+	
+	<div class="footer">
+		
+		<span style="flex: 1;"></span>
+		<span>
+			<button id="mailmerge-send-start" data-i18n="mailmerge.send.start;title=mailmerge.send.start.title"></button>
+		</span>
+		<span style="flex: 1;"></span>
+		
+	</div>
+	
+</div>
+
+<div class="error" id="mailmerge-error">
+	
+	<div class="alert" id="mailmerge-error-alert">
+		
+		<div class="header">
+			
+			<img src="/skin/exclamation-triangle.svg">
+			<span class="title" id="mailmerge-error-alert-title"></span>
+			<span style="flex: 1;"></span>
+			
+		</div>
+		
+		<div class="content">
+			
+			<div class="container">
+				<span id="mailmerge-error-alert-message" style="font-weight: bold;"></span>
+			</div>
+			
+			<div class="container">
+				<span>Help: <a href="https://addons.thunderbird.net/addon/mail-merge/">Homepage</a> and <a href="https://addons.thunderbird.net/addon/mail-merge/versions/">Changelog</a></span>
+			</div>
+			
+		</div>
+		
+		<div class="footer">
+			
+			<span style="flex: 1;"></span>
+			<span>
+				<button id="mailmerge-error-alert-accept">Accept</button>
+			</span>
+			<span style="flex: 1;"></span>
+			
+		</div>
+		
+	</div>
+	
+	<div class="confirm" id="mailmerge-error-confirm">
+		
+		<div class="header">
+			
+			<img src="/skin/exclamation-triangle.svg">
+			<span class="title" id="mailmerge-error-confirm-title"></span>
+			<span style="flex: 1;"></span>
+			
+		</div>
+		
+		<div class="content">
+			
+			<div class="container">
+				<span id="mailmerge-error-confirm-message" style="font-weight: bold;"></span>
+			</div>
+			
+			<div class="container">
+				<span>Help: <a href="https://addons.thunderbird.net/addon/mail-merge/">Homepage</a> and <a href="https://addons.thunderbird.net/addon/mail-merge/versions/">Changelog</a></span>
+			</div>
+			
+		</div>
+		
+		<div class="footer">
+			
+			<span style="flex: 1;"></span>
+			<span>
+				<button id="mailmerge-error-confirm-accept">Accept</button>
+				<button id="mailmerge-error-confirm-cancel">Cancel</button>
+			</span>
+			<span style="flex: 1;"></span>
+			
+		</div>
+		
+	</div>
+	
+</div>
+
+</body>
+</html>

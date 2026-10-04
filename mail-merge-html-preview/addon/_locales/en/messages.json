@@ -1,0 +1,193 @@
+{
+	
+	"mailmerge.dialog" : { "message" : "Mail Merge" },
+	
+	"mailmerge.dialog.legend.source" : { "message" : "Source" },
+	
+	"mailmerge.dialog.source" : { "message" : "Source:" },
+	"mailmerge.dialog.source.cardbook" : { "message" : "CardBook" },
+	"mailmerge.dialog.source.addressbook" : { "message" : "Address Book" },
+	"mailmerge.dialog.source.csv" : { "message" : "CSV" },
+	"mailmerge.dialog.source.json" : { "message" : "JSON" },
+	"mailmerge.dialog.source.xlsx" : { "message" : "XLSX" },
+	
+	"mailmerge.dialog.cardbook.addressbook" : { "message" : "Address Book:" },
+	"mailmerge.dialog.cardbook.addressbook.addressbooks" : { "message" : "All Address Books" },
+	
+	"mailmerge.dialog.addressbook.addressbook" : { "message" : "Address Book:" },
+	"mailmerge.dialog.addressbook.addressbook.addressbooks" : { "message" : "All Address Books" },
+	
+	"mailmerge.dialog.csv.file" : { "message" : "File:" },
+	"mailmerge.dialog.csv.characterset" : { "message" : "Character Set:" },
+	"mailmerge.dialog.csv.fielddelimiter" : { "message" : "Field Delimiter:" },
+	"mailmerge.dialog.csv.fielddelimiter.automatic" : { "message" : "Automatic" },
+	
+	"mailmerge.dialog.json.file" : { "message" : "File:" },
+	
+	"mailmerge.dialog.xlsx.file" : { "message" : "File:" },
+	"mailmerge.dialog.xlsx.sheetname" : { "message" : "Sheet Name:" },
+	
+	"mailmerge.dialog.legend.attachments" : { "message" : "Attachments" },
+	
+	"mailmerge.dialog.attachments.attachments" : { "message" : "Attachments:" },
+	
+	"mailmerge.dialog.legend.batch" : { "message" : "Batch" },
+	
+	"mailmerge.dialog.batch.pause" : { "message" : "Pause:" },
+	"mailmerge.dialog.batch.pause.random" : { "message" : "Random" },
+	"mailmerge.dialog.batch.start" : { "message" : "Start:" },
+	"mailmerge.dialog.batch.stop" : { "message" : "Stop:" },
+	
+	"mailmerge.dialog.legend.send" : { "message" : "Send" },
+	
+	"mailmerge.dialog.delivermode" : { "message" : "Deliver Mode:" },
+	"mailmerge.dialog.delivermode.saveasdraft" : { "message" : "Save As Draft" },
+	"mailmerge.dialog.delivermode.sendlater" : { "message" : "Send Later" },
+	"mailmerge.dialog.delivermode.sendnow" : { "message" : "Send Now" },
+	
+	"mailmerge.dialog.sendlater.at" : { "message" : "At:" },
+	"mailmerge.dialog.sendlater.recur" : { "message" : "Recur:" },
+	"mailmerge.dialog.sendlater.recur.none" : { "message" : "None" },
+	"mailmerge.dialog.sendlater.recur.minutely" : { "message" : "Minutely" },
+	"mailmerge.dialog.sendlater.recur.daily" : { "message" : "Daily" },
+	"mailmerge.dialog.sendlater.recur.weekly" : { "message" : "Weekly" },
+	"mailmerge.dialog.sendlater.recur.monthly" : { "message" : "Monthly" },
+	"mailmerge.dialog.sendlater.recur.yearly" : { "message" : "Yearly" },
+	"mailmerge.dialog.sendlater.every" : { "message" : "Every:" },
+	"mailmerge.dialog.sendlater.between" : { "message" : "Between:" },
+	"mailmerge.dialog.sendlater.only" : { "message" : "Only:" },
+	"mailmerge.dialog.sendlater.only.sunday" : { "message" : "Sunday" },
+	"mailmerge.dialog.sendlater.only.monday" : { "message" : "Monday" },
+	"mailmerge.dialog.sendlater.only.tuesday" : { "message" : "Tuesday" },
+	"mailmerge.dialog.sendlater.only.wednesday" : { "message" : "Wednesday" },
+	"mailmerge.dialog.sendlater.only.thursday" : { "message" : "Thursday" },
+	"mailmerge.dialog.sendlater.only.friday" : { "message" : "Friday" },
+	"mailmerge.dialog.sendlater.only.saturday" : { "message" : "Saturday" },
+	"mailmerge.dialog.sendlater.until" : { "message" : "Until:" },
+	
+	"mailmerge.dialog.load" : { "message" : "Load" },
+	"mailmerge.dialog.load.title" : { "message" : "Load the Settings" },
+	"mailmerge.dialog.reset" : { "message" : "Reset" },
+	"mailmerge.dialog.reset.title" : { "message" : "Reset the Settings" },
+	"mailmerge.dialog.save" : { "message" : "Save" },
+	"mailmerge.dialog.save.title" : { "message" : "Save the Settings" },
+	
+	"mailmerge.dialog.about" : { "message" : "About" },
+	"mailmerge.dialog.about.title" : { "message" : "About Mail Merge" },
+	"mailmerge.dialog.file" : { "message" : "File" },
+	"mailmerge.dialog.file.title" : { "message" : "Preview the File" },
+	"mailmerge.dialog.message" : { "message" : "Message" },
+	"mailmerge.dialog.message.title" : { "message" : "Preview the Message" },
+	"mailmerge.dialog.send" : { "message" : "Send" },
+	"mailmerge.dialog.send.title" : { "message" : "Send the Message" },
+	
+	"mailmerge.about" : { "message" : "About" },
+	
+	"mailmerge.about.version" : { "message" : "Version:" },
+	"mailmerge.about.developer" : { "message" : "Developer:" },
+	"mailmerge.about.support" : { "message" : "Support:" },
+	"mailmerge.about.homepage" : { "message" : "Homepage:" },
+	"mailmerge.about.changelog" : { "message" : "Changelog:" },
+	"mailmerge.about.license" : { "message" : "License:" },
+	
+	"mailmerge.file" : { "message" : "File" },
+	
+	"mailmerge.message" : { "message" : "Message" },
+	
+	"mailmerge.message.from" : { "message" : "From:" },
+	"mailmerge.message.to" : { "message" : "To:" },
+	"mailmerge.message.cc" : { "message" : "Cc:" },
+	"mailmerge.message.bcc" : { "message" : "Bcc:" },
+	"mailmerge.message.reply" : { "message" : "Reply:" },
+	"mailmerge.message.subject" : { "message" : "Subject:" },
+	"mailmerge.message.body" : { "message" : "Body:" },
+	"mailmerge.message.attachments" : { "message" : "Attachments:" },
+	"mailmerge.message.customheaders" : { "message" : "Custom Headers:" },
+	
+	"mailmerge.message.index" : { "message" : "Index" },
+	
+	"mailmerge.message.begin" : { "message" : "<<" },
+	"mailmerge.message.begin.title" : { "message" : "Begin" },
+	"mailmerge.message.previous" : { "message" : "<" },
+	"mailmerge.message.previous.title" : { "message" : "Previous" },
+	"mailmerge.message.next" : { "message" : ">" },
+	"mailmerge.message.next.title" : { "message" : "Next" },
+	"mailmerge.message.end" : { "message" : ">>" },
+	"mailmerge.message.end.title" : { "message" : "End" },
+	
+	"mailmerge.send" : { "message" : "Send" },
+	
+	"mailmerge.send.current" : { "message" : "Current:" },
+	"mailmerge.send.total" : { "message" : "Total:" },
+	"mailmerge.send.time" : { "message" : "Time:" },
+	
+	"mailmerge.send.start" : { "message" : "Start" },
+	"mailmerge.send.start.title" : { "message" : "Start" },
+	
+	"mailmerge.options" : { "message" : "Options" },
+	
+	"mailmerge.options.legend.options" : { "message" : "Options" },
+	
+	"mailmerge.options.saveastemplate" : { "message" : "Save As Template:" },
+	"mailmerge.options.recipientsreminder" : { "message" : "Recipients Reminder:" },
+	"mailmerge.options.variablesreminder" : { "message" : "Variables Reminder:" },
+	
+	"mailmerge.options.legend.beta" : { "message" : "Beta" },
+	
+	"mailmerge.options.beta" : { "message" : "Beta:" },
+	
+	"mailmerge.options.load" : { "message" : "Load" },
+	"mailmerge.options.load.title" : { "message" : "Load the Settings" },
+	"mailmerge.options.reset" : { "message" : "Reset" },
+	"mailmerge.options.reset.title" : { "message" : "Reset the Settings" },
+	"mailmerge.options.save" : { "message" : "Save" },
+	"mailmerge.options.save.title" : { "message" : "Save the Settings" },
+	
+	"mailmerge.betawarning.title" : { "message" : "Beta Warning" },
+	"mailmerge.betawarning.message" : { "message" : "Use \"Beta\" at your own risk!" },
+	
+	"mailmerge.encryptionwarning.title" : { "message" : "Encryption Warning" },
+	"mailmerge.encryptionwarning.message" : { "message" : "Mail Merge does not support encrypting or signing messages via OpenPGP or S/MIME!\n\nThe individual and personalized messages created by Mail Merge will neither be encrypted nor signed." },
+	
+	"mailmerge.delivermodewarning.title" : { "message" : "Deliver Mode Warning" },
+	"mailmerge.delivermodewarning.message" : { "message" : "Use \"Send Now\" as \"Deliver Mode\" at your own risk!\n\nIt is strongly recommended to use \"Send Later\" as \"Deliver Mode\" and to check the individual and personalized messages in the folder \"Local Folders -> Outbox\". Bugs in Thunderbird, bugs in Mail Merge and bugs in other add-ons may lead to unexpected and undesired results." },
+	
+	"mailmerge.recipientsreminder.title" : { "message" : "Recipients Reminder" },
+	"mailmerge.recipientsreminder.message" : { "message" : "The message contains multiple recipients.\n\nThe \"Recipients Reminder\" shall prevent accidentally clicking on \"Send Now\" or \"Send Later\". To start Mail Merge please click \"Cancel\" and use the menu item \"Tools -> Mail Merge\" or the toolbar button \"Mail Merge\"." },
+	
+	"mailmerge.variablesreminder.title" : { "message" : "Variables Reminder" },
+	"mailmerge.variablesreminder.message" : { "message" : "The message contains variables.\n\nThe \"Variables Reminder\" shall prevent accidentally clicking on \"Send Now\" or \"Send Later\". To start Mail Merge please click \"Cancel\" and use the menu item \"Tools -> Mail Merge\" or the toolbar button \"Mail Merge\"." },
+	
+	"mailmerge.notifications.finished" : { "message" : "Mail Merge is finished.\n$1 messages have been created within $2." },
+	
+	"mailmerge.preview.wide" : { "message" : "Desktop" },
+	
+	"mailmerge.preview.mobile" : { "message" : "Mobile" },
+	
+	"mailmerge.preview.tools" : { "message" : "Preview width" },
+	
+	"mailmerge.preview.frame" : { "message" : "Message preview" },
+	
+	"mailmerge.preview.unknown" : { "message" : "Not found in the data: $1" },
+	
+	"mailmerge.preview.formatting" : { "message" : "Remove the formatting inside {{ }} or retype the field." },
+	
+	"mailmerge.preview.empty" : { "message" : "Empty for this recipient: $1" },
+	
+	"mailmerge.preview.unresolved" : { "message" : "Not replaced: $1" },
+	
+	"mailmerge.preview.summary" : { "message" : "Recipients with empty fields: $1 / $2" },
+	
+	"mailmerge.preview.summary.next" : { "message" : "Show next" },
+	
+	"mailmerge.preview.plaintext" : { "message" : "Delivery format is plain text only: recipients will not see this formatting." },
+	
+	"mailmerge.preview.remote" : { "message" : "Remote images not loaded: $1" },
+	
+	"mailmerge.preview.remote.load" : { "message" : "Show remote images" },
+	
+	"mailmerge.preview.unavailable" : { "message" : "Images that cannot be shown in this preview: $1" },
+	
+	"mailmerge.preview.image" : { "message" : "Not shown in the preview: $1" }
+	
+}

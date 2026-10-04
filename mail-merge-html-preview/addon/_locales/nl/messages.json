@@ -1,0 +1,163 @@
+{
+	
+	"mailmerge.dialog" : { "message" : "Mail Merge" },
+	
+	"mailmerge.dialog.legend.source" : { "message" : "Bron" },
+	
+	"mailmerge.dialog.source" : { "message" : "Bron:" },
+	"mailmerge.dialog.source.cardbook" : { "message" : "CardBook" },
+	"mailmerge.dialog.source.addressbook" : { "message" : "Adresboek" },
+	"mailmerge.dialog.source.csv" : { "message" : "CSV" },
+	"mailmerge.dialog.source.json" : { "message" : "JSON" },
+	"mailmerge.dialog.source.xlsx" : { "message" : "XLSX" },
+	
+	"mailmerge.dialog.cardbook.addressbook" : { "message" : "Adresboek:" },
+	"mailmerge.dialog.cardbook.addressbook.addressbooks" : { "message" : "Alle adresboeken" },
+	
+	"mailmerge.dialog.addressbook.addressbook" : { "message" : "Adresboek:" },
+	"mailmerge.dialog.addressbook.addressbook.addressbooks" : { "message" : "Alle adresboeken" },
+	
+	"mailmerge.dialog.csv.file" : { "message" : "Bestand:" },
+	"mailmerge.dialog.csv.characterset" : { "message" : "Tekenset:" },
+	"mailmerge.dialog.csv.fielddelimiter" : { "message" : "Veldscheidingsteken:" },
+	"mailmerge.dialog.csv.fielddelimiter.automatic" : { "message" : "Automatisch" },
+	
+	"mailmerge.dialog.json.file" : { "message" : "Bestand:" },
+	
+	"mailmerge.dialog.xlsx.file" : { "message" : "Bestand:" },
+	"mailmerge.dialog.xlsx.sheetname" : { "message" : "Werkblad:" },
+	
+	"mailmerge.dialog.legend.attachments" : { "message" : "Bijlage" },
+	
+	"mailmerge.dialog.attachments.attachments" : { "message" : "Bijlagen:" },
+	
+	"mailmerge.dialog.legend.batch" : { "message" : "Batch" },
+	
+	"mailmerge.dialog.batch.pause" : { "message" : "Pauze:" },
+	"mailmerge.dialog.batch.pause.random" : { "message" : "Willekeurig" },
+	"mailmerge.dialog.batch.start" : { "message" : "Start:" },
+	"mailmerge.dialog.batch.stop" : { "message" : "Stop:" },
+	
+	"mailmerge.dialog.legend.send" : { "message" : "Verzenden" },
+	
+	"mailmerge.dialog.delivermode" : { "message" : "Verzendmodus:" },
+	"mailmerge.dialog.delivermode.saveasdraft" : { "message" : "Opslaan als concept" },
+	"mailmerge.dialog.delivermode.sendlater" : { "message" : "Later verzenden" },
+	"mailmerge.dialog.delivermode.sendnow" : { "message" : "Nu verzenden" },
+	
+	"mailmerge.dialog.sendlater.at" : { "message" : "Op:" },
+	"mailmerge.dialog.sendlater.recur" : { "message" : "Herhalen:" },
+	"mailmerge.dialog.sendlater.recur.none" : { "message" : "Geen" },
+	"mailmerge.dialog.sendlater.recur.minutely" : { "message" : "Minutieus" },
+	"mailmerge.dialog.sendlater.recur.daily" : { "message" : "Dagelijks" },
+	"mailmerge.dialog.sendlater.recur.weekly" : { "message" : "Wekelijks" },
+	"mailmerge.dialog.sendlater.recur.monthly" : { "message" : "Maandelijks" },
+	"mailmerge.dialog.sendlater.recur.yearly" : { "message" : "Jaarlijks" },
+	"mailmerge.dialog.sendlater.every" : { "message" : "Elke:" },
+	"mailmerge.dialog.sendlater.between" : { "message" : "Tussen:" },
+	"mailmerge.dialog.sendlater.only" : { "message" : "Enkel:" },
+	"mailmerge.dialog.sendlater.only.sunday" : { "message" : "Zondag" },
+	"mailmerge.dialog.sendlater.only.monday" : { "message" : "Maandag" },
+	"mailmerge.dialog.sendlater.only.tuesday" : { "message" : "Dinsdag" },
+	"mailmerge.dialog.sendlater.only.wednesday" : { "message" : "Woensdag" },
+	"mailmerge.dialog.sendlater.only.thursday" : { "message" : "Donderdag" },
+	"mailmerge.dialog.sendlater.only.friday" : { "message" : "Vrijdag" },
+	"mailmerge.dialog.sendlater.only.saturday" : { "message" : "Zaterdag" },
+	"mailmerge.dialog.sendlater.until" : { "message" : "Totdat:" },
+	
+	"mailmerge.dialog.load" : { "message" : "Laden" },
+	"mailmerge.dialog.load.title" : { "message" : "Instellingen laden" },
+	"mailmerge.dialog.reset" : { "message" : "Resetten" },
+	"mailmerge.dialog.reset.title" : { "message" : "Instellingen resetten" },
+	"mailmerge.dialog.save" : { "message" : "Bewaren" },
+	"mailmerge.dialog.save.title" : { "message" : "Instellingen bewaren" },
+	
+	"mailmerge.dialog.about" : { "message" : "Over" },
+	"mailmerge.dialog.about.title" : { "message" : "Over Mail Merge" },
+	"mailmerge.dialog.file" : { "message" : "Bestand" },
+	"mailmerge.dialog.file.title" : { "message" : "Bestand bekijken" },
+	"mailmerge.dialog.message" : { "message" : "Bericht" },
+	"mailmerge.dialog.message.title" : { "message" : "Bericht bekijken" },
+	"mailmerge.dialog.send" : { "message" : "Verzenden" },
+	"mailmerge.dialog.send.title" : { "message" : "Bericht verzenden" },
+	
+	"mailmerge.about" : { "message" : "Over" },
+	
+	"mailmerge.about.version" : { "message" : "Version:" },
+	"mailmerge.about.developer" : { "message" : "Developer:" },
+	"mailmerge.about.support" : { "message" : "Support:" },
+	"mailmerge.about.homepage" : { "message" : "Homepage:" },
+	"mailmerge.about.changelog" : { "message" : "Changelog:" },
+	"mailmerge.about.license" : { "message" : "License:" },
+	
+	"mailmerge.file" : { "message" : "Bestand" },
+	
+	"mailmerge.message" : { "message" : "Bericht" },
+	
+	"mailmerge.message.from" : { "message" : "Van:" },
+	"mailmerge.message.to" : { "message" : "To:" },
+	"mailmerge.message.cc" : { "message" : "Cc:" },
+	"mailmerge.message.bcc" : { "message" : "Bcc:" },
+	"mailmerge.message.reply" : { "message" : "Beantwoorden:" },
+	"mailmerge.message.subject" : { "message" : "Onderwerp:" },
+	"mailmerge.message.body" : { "message" : "Tekst:" },
+	"mailmerge.message.attachments" : { "message" : "Bijlage:" },
+	"mailmerge.message.customheaders" : { "message" : "Te wijzigen koppen:" },
+	
+	"mailmerge.message.index" : { "message" : "Index" },
+	
+	"mailmerge.message.begin" : { "message" : "<<" },
+	"mailmerge.message.begin.title" : { "message" : "Begin" },
+	"mailmerge.message.previous" : { "message" : "<" },
+	"mailmerge.message.previous.title" : { "message" : "Vorig" },
+	"mailmerge.message.next" : { "message" : ">" },
+	"mailmerge.message.next.title" : { "message" : "Volgend" },
+	"mailmerge.message.end" : { "message" : ">>" },
+	"mailmerge.message.end.title" : { "message" : "Einde" },
+	
+	"mailmerge.send" : { "message" : "Verzenden" },
+	
+	"mailmerge.send.current" : { "message" : "Huidig:" },
+	"mailmerge.send.total" : { "message" : "Totaal:" },
+	"mailmerge.send.time" : { "message" : "Tijd:" },
+	
+	"mailmerge.send.start" : { "message" : "Start" },
+	"mailmerge.send.start.title" : { "message" : "Start" },
+	
+	"mailmerge.options" : { "message" : "Opties" },
+	
+	"mailmerge.options.legend.options" : { "message" : "Opties" },
+	
+	"mailmerge.options.saveastemplate" : { "message" : "Bewaren als Template:" },
+	"mailmerge.options.recipientsreminder" : { "message" : "Ontvangersherinnering:" },
+	"mailmerge.options.variablesreminder" : { "message" : "Variabelenherinnering:" },
+	
+	"mailmerge.options.legend.beta" : { "message" : "Beta" },
+	
+	"mailmerge.options.beta" : { "message" : "Beta:" },
+	
+	"mailmerge.options.load" : { "message" : "Laden" },
+	"mailmerge.options.load.title" : { "message" : "Instellingen laden" },
+	"mailmerge.options.reset" : { "message" : "Resetten" },
+	"mailmerge.options.reset.title" : { "message" : "Instellingen resetten" },
+	"mailmerge.options.save" : { "message" : "Bewaren" },
+	"mailmerge.options.save.title" : { "message" : "Instellingen bewaren" },
+	
+	"mailmerge.betawarning.title" : { "message" : "Beta Warning" },
+	"mailmerge.betawarning.message" : { "message" : "Use \"Beta\" at your own risk!" },
+	
+	"mailmerge.encryptionwarning.title" : { "message" : " Versleutelingswaarschuwing" },
+	"mailmerge.encryptionwarning.message" : { "message" : "Mail Merge ondersteunt geen versleuteling of ondertekening van berichten via OpenPGP of S/MIME!\n\nDe individuele en gepersonaliseerde berichten die met Mail Merge worden gemaakt, worden niet versleuteld of ondertekend." },
+	
+	"mailmerge.delivermodewarning.title" : { "message" : "Verzendmoduswaarschuwing" },
+	"mailmerge.delivermodewarning.message" : { "message" : "Gebruik \"Nu verzenden\" of \"Verzendmodus\" op je eigen risico!\n\nHet wordt sterk aangeraden om \"Later verzenden\" te gebruiken als \"Verzendmodus\" en om de individuele of gepersonaliseerde berichten te controleren in \"Lokale mappen -> Postvak uit\". Bugs in Thunderbird, bugs in Mail Merge en bugs in andere add-ons kunnen leiden tot onverwachte en ongewenste resultaten." },
+	
+	"mailmerge.recipientsreminder.title" : { "message" : "Ontvangersherinnering" },
+	"mailmerge.recipientsreminder.message" : { "message" : "Deze mail bevat meerdere ontvangers.\n\nDe \"Ontvangersherinnering\" zal voorkomen dat je per ongeluk zal klikken op \"Nu verzenden\" of \"Later verzenden\". Om Mail Merge te starten klik op \"Annuleren\" en gebruik het menu \"Extra -> Mail Merge\" of de werkbalkknop \"Mail Merge\"." },
+	
+	"mailmerge.variablesreminder.title" : { "message" : "Variabelenherinnering" },
+	"mailmerge.variablesreminder.message" : { "message" : "Deze mail bevat variabelen.\n\nDe \"Variabelenherinnering\" zal voorkomen dat je per ongeluk zal klikken op \"Nu verzenden\" of \"Later verzenden\". Om Mail Merge te starten klik op \"Annuleren\" en gebruik het menu \"Extra -> Mail Merge\" of de werkbalkknop \"Mail Merge\"." },
+	
+	"mailmerge.notifications.finished" : { "message" : "Mail Merge heeft zijn taak volbracht.\n$1 berichten verwerkt in $2." }
+	
+}

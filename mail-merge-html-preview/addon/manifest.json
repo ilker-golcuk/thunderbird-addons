@@ -1,0 +1,72 @@
+{
+	
+	"name": "Mail Merge (HTML Preview)",
+	"version": "11.6.1.3",
+	"description": "Create and Save or Send Multiple Individual and Personalized Messages from a Draft (local rendered HTML preview customization)",
+	"author": "Alexander Bergmann",
+	
+	"default_locale": "en",
+	
+	"applications": {
+		"gecko": {
+			"id": "mailmerge@example.net",
+			"strict_min_version": "128.0a1",
+			"strict_max_version": "158.*"
+		}
+	},
+	
+	"icons": {
+		"16": "icon.svg",
+		"24": "icon.svg",
+		"32": "icon.svg",
+		"48": "icon.svg",
+		"64": "icon.svg"
+	},
+	
+	"background": {
+		"scripts": ["background.js"]
+	},
+	
+	"commands": {
+		"_execute_compose_action": {
+			"description": "Open the Mail Merge Dialog"
+		}
+	},
+	
+	"compose_action": {
+		"default_label": "Mail Merge",
+		"default_title": "Mail Merge",
+		"default_icon": "icon.svg"
+	},
+	
+	"options_ui": {
+		"page": "content/options.html"
+	},
+	
+	"experiment_apis": {
+		"mailmerge": {
+			"schema": "experiment/schema.json",
+			"parent": {
+				"scopes": ["addon_parent"],
+				"paths": [["mailmerge"]],
+				"script": "experiment/implementation.js",
+				"events": ["startup"]
+			}
+		}
+	},
+	
+	"permissions": [
+		"accountsRead",
+		"addressBooks",
+		"compose",
+		"compose.save",
+		"compose.send",
+		"management",
+		"menus",
+		"notifications",
+		"storage"
+	],
+	
+	"manifest_version": 2
+	
+}

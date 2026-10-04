@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+<head>
+<title>Mail Merge</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+<script src="options.js"></script>
+</head>
+<body id="mailmerge">
+
+<div class="tab active" id="mailmerge-options">
+	
+	<div class="header" style="background: #fff;">
+		
+	</div>
+	
+	<div class="content">
+		
+		<div class="section">
+			
+			<div class="title" data-i18n="mailmerge.options.legend.options"></div>
+			
+			<div class="container" id="mailmerge-options-saveastemplate-container">
+				<div>
+					<span id="mailmerge-options-saveastemplate-label" data-i18n="mailmerge.options.saveastemplate"></span>
+					<span><input type="checkbox" id="mailmerge-options-saveastemplate-checkbox" aria-labelledby="mailmerge-options-saveastemplate-label"></span>
+					<span></span>
+				</div>
+			</div>
+			
+			<div class="container" id="mailmerge-options-recipientsreminder-container">
+				<div>
+					<span id="mailmerge-options-recipientsreminder-label" data-i18n="mailmerge.options.recipientsreminder"></span>
+					<span><input type="checkbox" id="mailmerge-options-recipientsreminder-checkbox" aria-labelledby="mailmerge-options-recipientsreminder-label"></span>
+					<span>
+						<button id="mailmerge-options-recipientsreminder-minus">-</button>
+						<input type="number" id="mailmerge-options-recipientsreminder" aria-labelledby="mailmerge-options-recipientsreminder-label" min="1" required>
+						<button id="mailmerge-options-recipientsreminder-plus">+</button>
+					</span>
+				</div>
+			</div>
+			
+			<div class="container" id="mailmerge-options-variablesreminder-container">
+				<div>
+					<span id="mailmerge-options-variablesreminder-label" data-i18n="mailmerge.options.variablesreminder"></span>
+					<span><input type="checkbox" id="mailmerge-options-variablesreminder-checkbox" aria-labelledby="mailmerge-options-variablesreminder-label"></span>
+					<span></span>
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="section">
+			
+			<div class="title" data-i18n="mailmerge.options.legend.beta"></div>
+			
+			<div class="container" id="mailmerge-options-beta-container">
+				<div>
+					<span id="mailmerge-options-beta-label" data-i18n="mailmerge.options.beta"></span>
+					<span><input type="checkbox" id="mailmerge-options-beta-checkbox" aria-labelledby="mailmerge-options-beta-label"></span>
+					<span></span>
+				</div>
+			</div>
+			
+		</div>
+		
+	</div>
+	
+	<div class="footer" style="background: #fff;">
+		
+		<span style="flex: 1;"></span>
+		<span>
+			<button id="mailmerge-options-load" data-i18n="mailmerge.options.load;title=mailmerge.options.load.title"></button>
+			<button id="mailmerge-options-reset" data-i18n="mailmerge.options.reset;title=mailmerge.options.reset.title"></button>
+			<button id="mailmerge-options-save" data-i18n="mailmerge.options.save;title=mailmerge.options.save.title"></button>
+		</span>
+		<span style="flex: 1;"></span>
+		
+	</div>
+	
+</div>
+
+<div class="error" id="mailmerge-error">
+	
+	<div class="alert" id="mailmerge-error-alert">
+		
+		<div class="header">
+			
+			<img src="/skin/exclamation-triangle.svg">
+			<span class="title" id="mailmerge-error-alert-title"></span>
+			<span style="flex: 1;"></span>
+			
+		</div>
+		
+		<div class="content">
+			
+			<div class="container">
+				<span id="mailmerge-error-alert-message" style="font-weight: bold;"></span>
+			</div>
+			
+			<div class="container">
+				<span>Help: <a href="https://addons.thunderbird.net/addon/mail-merge/">Homepage</a> and <a href="https://addons.thunderbird.net/addon/mail-merge/versions/">Changelog</a></span>
+			</div>
+			
+		</div>
+		
+		<div class="footer">
+			
+			<span style="flex: 1;"></span>
+			<span>
+				<button id="mailmerge-error-alert-accept">Accept</button>
+			</span>
+			<span style="flex: 1;"></span>
+			
+		</div>
+		
+	</div>
+	
+	<div class="confirm" id="mailmerge-error-confirm">
+		
+		<div class="header">
+			
+			<img src="/skin/exclamation-triangle.svg">
+			<span class="title" id="mailmerge-error-confirm-title"></span>
+			<span style="flex: 1;"></span>
+			
+		</div>
+		
+		<div class="content">
+			
+			<div class="container">
+				<span id="mailmerge-error-confirm-message" style="font-weight: bold;"></span>
+			</div>
+			
+			<div class="container">
+				<span>Help: <a href="https://addons.thunderbird.net/addon/mail-merge/">Homepage</a> and <a href="https://addons.thunderbird.net/addon/mail-merge/versions/">Changelog</a></span>
+			</div>
+			
+		</div>
+		
+		<div class="footer">
+			
+			<span style="flex: 1;"></span>
+			<span>
+				<button id="mailmerge-error-confirm-accept">Accept</button>
+				<button id="mailmerge-error-confirm-cancel">Cancel</button>
+			</span>
+			<span style="flex: 1;"></span>
+			
+		</div>
+		
+	</div>
+	
+</div>
+
+</body>
+</html>

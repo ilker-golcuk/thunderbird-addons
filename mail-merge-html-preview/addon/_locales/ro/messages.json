@@ -1,0 +1,163 @@
+{
+	
+	"mailmerge.dialog" : { "message" : "Mail Merge" },
+	
+	"mailmerge.dialog.legend.source" : { "message" : "Sursă" },
+	
+	"mailmerge.dialog.source" : { "message" : "Sursă:" },
+	"mailmerge.dialog.source.cardbook" : { "message" : "CardBook" },
+	"mailmerge.dialog.source.addressbook" : { "message" : "Agenda" },
+	"mailmerge.dialog.source.csv" : { "message" : "CSV" },
+	"mailmerge.dialog.source.json" : { "message" : "JSON" },
+	"mailmerge.dialog.source.xlsx" : { "message" : "XLSX" },
+	
+	"mailmerge.dialog.cardbook.addressbook" : { "message" : "Agenda:" },
+	"mailmerge.dialog.cardbook.addressbook.addressbooks" : { "message" : "Agende" },
+	
+	"mailmerge.dialog.addressbook.addressbook" : { "message" : "Agenda:" },
+	"mailmerge.dialog.addressbook.addressbook.addressbooks" : { "message" : "Agende" },
+	
+	"mailmerge.dialog.csv.file" : { "message" : "Fișier:" },
+	"mailmerge.dialog.csv.characterset" : { "message" : "Set Caractere:" },
+	"mailmerge.dialog.csv.fielddelimiter" : { "message" : "Delimitator:" },
+	"mailmerge.dialog.csv.fielddelimiter.automatic" : { "message" : "Automatic" },
+	
+	"mailmerge.dialog.json.file" : { "message" : "Fișier:" },
+	
+	"mailmerge.dialog.xlsx.file" : { "message" : "Fișier:" },
+	"mailmerge.dialog.xlsx.sheetname" : { "message" : "Foaie:" },
+	
+	"mailmerge.dialog.legend.attachments" : { "message" : "Atașamente" },
+	
+	"mailmerge.dialog.attachments.attachments" : { "message" : "Atașamente:" },
+	
+	"mailmerge.dialog.legend.batch" : { "message" : "Lot" },
+	
+	"mailmerge.dialog.batch.pause" : { "message" : "Pauza:" },
+	"mailmerge.dialog.batch.pause.random" : { "message" : "Aleatoriu" },
+	"mailmerge.dialog.batch.start" : { "message" : "Start:" },
+	"mailmerge.dialog.batch.stop" : { "message" : "Stop:" },
+	
+	"mailmerge.dialog.legend.send" : { "message" : "Trimite" },
+	
+	"mailmerge.dialog.delivermode" : { "message" : "Mod de Livrare:" },
+	"mailmerge.dialog.delivermode.saveasdraft" : { "message" : "Salvare ca Proiect" },
+	"mailmerge.dialog.delivermode.sendlater" : { "message" : "Trimite mai Târziu" },
+	"mailmerge.dialog.delivermode.sendnow" : { "message" : "Trimite Acum" },
+	
+	"mailmerge.dialog.sendlater.at" : { "message" : "La:" },
+	"mailmerge.dialog.sendlater.recur" : { "message" : "Repetați:" },
+	"mailmerge.dialog.sendlater.recur.none" : { "message" : "Niciuna" },
+	"mailmerge.dialog.sendlater.recur.minutely" : { "message" : "Pe Minut" },
+	"mailmerge.dialog.sendlater.recur.daily" : { "message" : "Zilnic" },
+	"mailmerge.dialog.sendlater.recur.weekly" : { "message" : "Saptămanal" },
+	"mailmerge.dialog.sendlater.recur.monthly" : { "message" : "Lunar" },
+	"mailmerge.dialog.sendlater.recur.yearly" : { "message" : "Anual" },
+	"mailmerge.dialog.sendlater.every" : { "message" : "Fiecare:" },
+	"mailmerge.dialog.sendlater.between" : { "message" : "Intre:" },
+	"mailmerge.dialog.sendlater.only" : { "message" : "Doar:" },
+	"mailmerge.dialog.sendlater.only.sunday" : { "message" : "Duminică" },
+	"mailmerge.dialog.sendlater.only.monday" : { "message" : "Luni" },
+	"mailmerge.dialog.sendlater.only.tuesday" : { "message" : "Marti" },
+	"mailmerge.dialog.sendlater.only.wednesday" : { "message" : "Miercuri" },
+	"mailmerge.dialog.sendlater.only.thursday" : { "message" : "Joi" },
+	"mailmerge.dialog.sendlater.only.friday" : { "message" : "Vineri" },
+	"mailmerge.dialog.sendlater.only.saturday" : { "message" : "Sambată" },
+	"mailmerge.dialog.sendlater.until" : { "message" : "Pana la:" },
+	
+	"mailmerge.dialog.load" : { "message" : "Încarcă" },
+	"mailmerge.dialog.load.title" : { "message" : "Încărcați Setările" },
+	"mailmerge.dialog.reset" : { "message" : "Reset" },
+	"mailmerge.dialog.reset.title" : { "message" : "Resetați Setările" },
+	"mailmerge.dialog.save" : { "message" : "Salvează" },
+	"mailmerge.dialog.save.title" : { "message" : "Salvează Setările" },
+	
+	"mailmerge.dialog.about" : { "message" : "Despre" },
+	"mailmerge.dialog.about.title" : { "message" : "Despre Mail Merge" },
+	"mailmerge.dialog.file" : { "message" : "Fișier" },
+	"mailmerge.dialog.file.title" : { "message" : "Previzualizați Fișierul" },
+	"mailmerge.dialog.message" : { "message" : "Mesaj" },
+	"mailmerge.dialog.message.title" : { "message" : "Previzualizați Mesajul" },
+	"mailmerge.dialog.send" : { "message" : "Trimite" },
+	"mailmerge.dialog.send.title" : { "message" : "Trimite Mesajul" },
+	
+	"mailmerge.about" : { "message" : "Despre" },
+	
+	"mailmerge.about.version" : { "message" : "Version:" },
+	"mailmerge.about.developer" : { "message" : "Developer:" },
+	"mailmerge.about.support" : { "message" : "Support:" },
+	"mailmerge.about.homepage" : { "message" : "Homepage:" },
+	"mailmerge.about.changelog" : { "message" : "Changelog:" },
+	"mailmerge.about.license" : { "message" : "License:" },
+	
+	"mailmerge.file" : { "message" : "Fișier" },
+	
+	"mailmerge.message" : { "message" : "Mesaj" },
+	
+	"mailmerge.message.from" : { "message" : "Expeditor:" },
+	"mailmerge.message.to" : { "message" : "Pentru:" },
+	"mailmerge.message.cc" : { "message" : "CC:" },
+	"mailmerge.message.bcc" : { "message" : "BCC:" },
+	"mailmerge.message.reply" : { "message" : "Raspunde:" },
+	"mailmerge.message.subject" : { "message" : "Subiect:" },
+	"mailmerge.message.body" : { "message" : "Editeaza:" },
+	"mailmerge.message.attachments" : { "message" : "Atașamente:" },
+	"mailmerge.message.customheaders" : { "message" : "Anteturi Personalizate:" },
+	
+	"mailmerge.message.index" : { "message" : "Index" },
+	
+	"mailmerge.message.begin" : { "message" : "<<" },
+	"mailmerge.message.begin.title" : { "message" : "Incepe" },
+	"mailmerge.message.previous" : { "message" : "<" },
+	"mailmerge.message.previous.title" : { "message" : "Anterior" },
+	"mailmerge.message.next" : { "message" : ">" },
+	"mailmerge.message.next.title" : { "message" : "Următor" },
+	"mailmerge.message.end" : { "message" : ">>" },
+	"mailmerge.message.end.title" : { "message" : "Finalizare" },
+	
+	"mailmerge.send" : { "message" : "Trimite" },
+	
+	"mailmerge.send.current" : { "message" : "Actual:" },
+	"mailmerge.send.total" : { "message" : "Total:" },
+	"mailmerge.send.time" : { "message" : "Timp:" },
+	
+	"mailmerge.send.start" : { "message" : "Start" },
+	"mailmerge.send.start.title" : { "message" : "Start" },
+	
+	"mailmerge.options" : { "message" : "Opțiuni" },
+	
+	"mailmerge.options.legend.options" : { "message" : "Opțiuni" },
+	
+	"mailmerge.options.saveastemplate" : { "message" : "Salvare ca Proiect:" },
+	"mailmerge.options.recipientsreminder" : { "message" : "Amintire Destinatari:" },
+	"mailmerge.options.variablesreminder" : { "message" : "Amintire Variabile:" },
+	
+	"mailmerge.options.legend.beta" : { "message" : "Beta" },
+	
+	"mailmerge.options.beta" : { "message" : "Beta:" },
+	
+	"mailmerge.options.load" : { "message" : "Încarcă" },
+	"mailmerge.options.load.title" : { "message" : "Încărcați Setările" },
+	"mailmerge.options.reset" : { "message" : "Reset" },
+	"mailmerge.options.reset.title" : { "message" : "Resetați Setările" },
+	"mailmerge.options.save" : { "message" : "Salvează" },
+	"mailmerge.options.save.title" : { "message" : "Salvează Setările" },
+	
+	"mailmerge.betawarning.title" : { "message" : "Beta Warning" },
+	"mailmerge.betawarning.message" : { "message" : "Use \"Beta\" at your own risk!" },
+	
+	"mailmerge.encryptionwarning.title" : { "message" : "Avertisment de criptare" },
+	"mailmerge.encryptionwarning.message" : { "message" : "Mail Merge nu acceptă criptarea sau semnarea mesajelor prin OpenPGP sau S/MIME!\n\nI mesajele individuale și personalizate create cu Mail Merge nu vor fi criptate sau semnate." },
+	
+	"mailmerge.delivermodewarning.title" : { "message" : "Alertă Mod de Livrare" },
+	"mailmerge.delivermodewarning.message" : { "message" : "Foloseste \"Trimite Acum\" ca \"Mod de Livrare\" pe risc propiu!\n\nEste recomandat utilizarea \"Trimite mai Târziu\" ca \"Mod de Livrare\" și pentru a verifica mesajele individuale și personalizate în dosarul \"Dosare Locale -> Căsuța de Ieșire\". Erorile de Thunderbird, erorile de Mail Merge și erorile altor addons pot provoca rezultate neașteptate și nedorite." },
+	
+	"mailmerge.recipientsreminder.title" : { "message" : "Amintire Destinatari" },
+	"mailmerge.recipientsreminder.message" : { "message" : "Mesajul conține mai mulți destinatari.\n\nEl \"Amintire Destinatari\" vă va împiedica să faceți clic accidental pe \"Trimite Acum\" sau \"Trimite mai Târziu\". Pentru a porni Mail Merge faceti click pe \"Anulare\" si utilizati optiunea din meniul \"Instrumente -> Mail Merge\" sau butonul din bara de instrumente \"Mail Merge\"." },
+	
+	"mailmerge.variablesreminder.title" : { "message" : "Amintire Variabile" },
+	"mailmerge.variablesreminder.message" : { "message" : "Mesajul conține variabile.\n\nEl \"Amintire Variabile\" vă va împiedica să faceți clic accidental pe \"Trimite Acum\" sau \"Trimite mai Târziu\". Pentru a porni Mail Merge faceti click pe \"Anulare\" si utilizati optiunea din meniul \"Instrumente -> Mail Merge\" sau butonul din bara de instrumente \"Mail Merge\"." },
+	
+	"mailmerge.notifications.finished" : { "message" : "Mail Merge a terminat.\n$1 mesaje au fost create in $2." }
+	
+}

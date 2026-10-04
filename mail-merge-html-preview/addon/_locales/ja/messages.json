@@ -1,0 +1,163 @@
+{
+	
+	"mailmerge.dialog" : { "message" : "Mail Merge" },
+	
+	"mailmerge.dialog.legend.source" : { "message" : "データソース" },
+	
+	"mailmerge.dialog.source" : { "message" : "ソース:" },
+	"mailmerge.dialog.source.cardbook" : { "message" : "CardBook" },
+	"mailmerge.dialog.source.addressbook" : { "message" : "アドレス帳" },
+	"mailmerge.dialog.source.csv" : { "message" : "CSV" },
+	"mailmerge.dialog.source.json" : { "message" : "JSON" },
+	"mailmerge.dialog.source.xlsx" : { "message" : "XLSX" },
+	
+	"mailmerge.dialog.cardbook.addressbook" : { "message" : "アドレス帳:" },
+	"mailmerge.dialog.cardbook.addressbook.addressbooks" : { "message" : "全てのアドレス帳" },
+	
+	"mailmerge.dialog.addressbook.addressbook" : { "message" : "アドレス帳:" },
+	"mailmerge.dialog.addressbook.addressbook.addressbooks" : { "message" : "全てのアドレス帳" },
+	
+	"mailmerge.dialog.csv.file" : { "message" : "ファイル:" },
+	"mailmerge.dialog.csv.characterset" : { "message" : "文字コード:" },
+	"mailmerge.dialog.csv.fielddelimiter" : { "message" : "区切り:" },
+	"mailmerge.dialog.csv.fielddelimiter.automatic" : { "message" : "自動" },
+	
+	"mailmerge.dialog.json.file" : { "message" : "ファイル:" },
+	
+	"mailmerge.dialog.xlsx.file" : { "message" : "ファイル:" },
+	"mailmerge.dialog.xlsx.sheetname" : { "message" : "シート名:" },
+	
+	"mailmerge.dialog.legend.attachments" : { "message" : "添付ファイル" },
+	
+	"mailmerge.dialog.attachments.attachments" : { "message" : "添付ファイル:" },
+	
+	"mailmerge.dialog.legend.batch" : { "message" : "一括" },
+	
+	"mailmerge.dialog.batch.pause" : { "message" : "一時停止:" },
+	"mailmerge.dialog.batch.pause.random" : { "message" : "ランダム" },
+	"mailmerge.dialog.batch.start" : { "message" : "開始:" },
+	"mailmerge.dialog.batch.stop" : { "message" : "停止:" },
+	
+	"mailmerge.dialog.legend.send" : { "message" : "送信" },
+	
+	"mailmerge.dialog.delivermode" : { "message" : "配信モード:" },
+	"mailmerge.dialog.delivermode.saveasdraft" : { "message" : "下書きとして保存" },
+	"mailmerge.dialog.delivermode.sendlater" : { "message" : "あとで送信" },
+	"mailmerge.dialog.delivermode.sendnow" : { "message" : "すぐに送信" },
+	
+	"mailmerge.dialog.sendlater.at" : { "message" : "時刻:" },
+	"mailmerge.dialog.sendlater.recur" : { "message" : "繰り返し:" },
+	"mailmerge.dialog.sendlater.recur.none" : { "message" : "なし" },
+	"mailmerge.dialog.sendlater.recur.minutely" : { "message" : "分毎" },
+	"mailmerge.dialog.sendlater.recur.daily" : { "message" : "日次" },
+	"mailmerge.dialog.sendlater.recur.weekly" : { "message" : "週次" },
+	"mailmerge.dialog.sendlater.recur.monthly" : { "message" : "月次" },
+	"mailmerge.dialog.sendlater.recur.yearly" : { "message" : "年次" },
+	"mailmerge.dialog.sendlater.every" : { "message" : "間隔:" },
+	"mailmerge.dialog.sendlater.between" : { "message" : "期間:" },
+	"mailmerge.dialog.sendlater.only" : { "message" : "曜日:" },
+	"mailmerge.dialog.sendlater.only.sunday" : { "message" : "日曜" },
+	"mailmerge.dialog.sendlater.only.monday" : { "message" : "月曜" },
+	"mailmerge.dialog.sendlater.only.tuesday" : { "message" : "火曜" },
+	"mailmerge.dialog.sendlater.only.wednesday" : { "message" : "水曜" },
+	"mailmerge.dialog.sendlater.only.thursday" : { "message" : "木曜" },
+	"mailmerge.dialog.sendlater.only.friday" : { "message" : "金曜" },
+	"mailmerge.dialog.sendlater.only.saturday" : { "message" : "土曜" },
+	"mailmerge.dialog.sendlater.until" : { "message" : "終了期限:" },
+	
+	"mailmerge.dialog.load" : { "message" : "読み込み" },
+	"mailmerge.dialog.load.title" : { "message" : "設定を読み込む" },
+	"mailmerge.dialog.reset" : { "message" : "リセット" },
+	"mailmerge.dialog.reset.title" : { "message" : "設定をリセット" },
+	"mailmerge.dialog.save" : { "message" : "保存" },
+	"mailmerge.dialog.save.title" : { "message" : "設定を保存する" },
+	
+	"mailmerge.dialog.about" : { "message" : "概要" },
+	"mailmerge.dialog.about.title" : { "message" : "Mail Merge について" },
+	"mailmerge.dialog.file" : { "message" : "ファイル" },
+	"mailmerge.dialog.file.title" : { "message" : "ファイルをプレビュー" },
+	"mailmerge.dialog.message" : { "message" : "メッセージ" },
+	"mailmerge.dialog.message.title" : { "message" : "メッセージをプレビュー" },
+	"mailmerge.dialog.send" : { "message" : "送信" },
+	"mailmerge.dialog.send.title" : { "message" : "メッセージを送信" },
+	
+	"mailmerge.about" : { "message" : "概要" },
+	
+	"mailmerge.about.version" : { "message" : "バージョン:" },
+	"mailmerge.about.developer" : { "message" : "開発者:" },
+	"mailmerge.about.support" : { "message" : "サポート:" },
+	"mailmerge.about.homepage" : { "message" : "ホームページ:" },
+	"mailmerge.about.changelog" : { "message" : "更新履歴:" },
+	"mailmerge.about.license" : { "message" : "ライセンス:" },
+	
+	"mailmerge.file" : { "message" : "ファイル" },
+	
+	"mailmerge.message" : { "message" : "メッセージ" },
+	
+	"mailmerge.message.from" : { "message" : "差出人:" },
+	"mailmerge.message.to" : { "message" : "宛先:" },
+	"mailmerge.message.cc" : { "message" : "Cc:" },
+	"mailmerge.message.bcc" : { "message" : "Bcc:" },
+	"mailmerge.message.reply" : { "message" : "返信先:" },
+	"mailmerge.message.subject" : { "message" : "件名:" },
+	"mailmerge.message.body" : { "message" : "本文:" },
+	"mailmerge.message.attachments" : { "message" : "添付ファイル:" },
+	"mailmerge.message.customheaders" : { "message" : "カスタムヘッダー:" },
+	
+	"mailmerge.message.index" : { "message" : "インデックス" },
+	
+	"mailmerge.message.begin" : { "message" : "<<" },
+	"mailmerge.message.begin.title" : { "message" : "先頭" },
+	"mailmerge.message.previous" : { "message" : "<" },
+	"mailmerge.message.previous.title" : { "message" : "前" },
+	"mailmerge.message.next" : { "message" : ">" },
+	"mailmerge.message.next.title" : { "message" : "次" },
+	"mailmerge.message.end" : { "message" : ">>" },
+	"mailmerge.message.end.title" : { "message" : "末尾" },
+	
+	"mailmerge.send" : { "message" : "送信" },
+	
+	"mailmerge.send.current" : { "message" : "送信中:" },
+	"mailmerge.send.total" : { "message" : "合計:" },
+	"mailmerge.send.time" : { "message" : "経過時間:" },
+	
+	"mailmerge.send.start" : { "message" : "送信開始" },
+	"mailmerge.send.start.title" : { "message" : "送信開始" },
+	
+	"mailmerge.options" : { "message" : "オプション" },
+	
+	"mailmerge.options.legend.options" : { "message" : "オプション" },
+	
+	"mailmerge.options.saveastemplate" : { "message" : "テンプレートとして保存:" },
+	"mailmerge.options.recipientsreminder" : { "message" : "受信者確認:" },
+	"mailmerge.options.variablesreminder" : { "message" : "変数確認:" },
+	
+	"mailmerge.options.legend.beta" : { "message" : "Beta" },
+	
+	"mailmerge.options.beta" : { "message" : "Beta:" },
+	
+	"mailmerge.options.load" : { "message" : "読み込む" },
+	"mailmerge.options.load.title" : { "message" : "設定を読み込む" },
+	"mailmerge.options.reset" : { "message" : "リセット" },
+	"mailmerge.options.reset.title" : { "message" : "設定のリセット" },
+	"mailmerge.options.save" : { "message" : "保存" },
+	"mailmerge.options.save.title" : { "message" : "設定の保存" },
+	
+	"mailmerge.betawarning.title" : { "message" : "Beta 版の警告" },
+	"mailmerge.betawarning.message" : { "message" : "\"Beta\" 版は自己責任で!" },
+	
+	"mailmerge.encryptionwarning.title" : { "message" : "暗号化の警告" },
+	"mailmerge.encryptionwarning.message" : { "message" : "Mail Merge はOpenPGPまたはS/MIMEによるメッセージの暗号化や署名をサポートしていません。\n\nMail Merge によって作成される個別のパーソナライズされたメッセージは、暗号化も署名もされません。" },
+	
+	"mailmerge.delivermodewarning.title" : { "message" : "配信モードの警告" },
+	"mailmerge.delivermodewarning.message" : { "message" : "「配信モード」として「すぐに送信」を使用する場合は、自己責任でお願いします！\n\n「配信モード」に「あとで送信」を選択し、「ローカルフォルダ」 -> 「送信トレイ」で個別のメッセージを確認することを強くお勧めします。Thunderbird や Mail Merge のバグ、または他のアドオンのバグにより、予期せずに望ましくない結果を招く恐れがあります。" },
+	
+	"mailmerge.recipientsreminder.title" : { "message" : "受信者確認" },
+	"mailmerge.recipientsreminder.message" : { "message" : "メッセージに複数の宛先が含まれています。\n\n「受信者確認」は、「すぐに送信」または「あとで送信」を誤ってクリックするのを防ぎます。Mail Merge を開始するには、「キャンセル」をクリックし、メニュー項目「ツール」 -> 「Mail Merge」またはツールバーボタン「Mail Merge」を使用してください。" },
+	
+	"mailmerge.variablesreminder.title" : { "message" : "変数確認" },
+	"mailmerge.variablesreminder.message" : { "message" : "メッセージに変数が含まれています。\n\n「変数確認」は、「すぐに送信」または「あとで送信」を誤ってクリックするのを防ぎます。Mail Merge を開始するには、「キャンセル」をクリックし、メニュー項目「ツール」 -> 「Mail Merge」またはツールバーボタン「Mail Merge」を使用してください。" },
+	
+	"mailmerge.notifications.finished" : { "message" : "Mail Merge が完了しました。\n$2 以内に $1 通のメッセージが作成されました。" }
+	
+}

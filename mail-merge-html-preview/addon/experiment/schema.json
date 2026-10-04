@@ -1,0 +1,116 @@
+[
+	{
+		"namespace": "mailmerge",
+		"functions": [
+			{
+				"name": "alert",
+				"type": "function",
+				"async": true,
+				"parameters": [
+					{
+						"name": "title",
+						"type": "string"
+					},
+					{
+						"name": "message",
+						"type": "string"
+					}
+				]
+			},
+			{
+				"name": "confirm",
+				"type": "function",
+				"async": true,
+				"parameters": [
+					{
+						"name": "title",
+						"type": "string"
+					},
+					{
+						"name": "message",
+						"type": "string"
+					}
+				]
+			}
+		]
+	},
+	{
+		"namespace": "mailmerge.compose",
+		"functions": [
+			{
+				"name": "init",
+				"type": "function",
+				"async": true,
+				"parameters": [
+					{
+						"name": "tab",
+						"type": "integer"
+					}
+				]
+			},
+			{
+				"name": "expand",
+				"type": "function",
+				"async": true,
+				"parameters": [
+					{
+						"name": "tab",
+						"type": "integer"
+					}
+				]
+			},
+			{
+				"name": "lock",
+				"type": "function",
+				"async": true,
+				"parameters": [
+					{
+						"name": "tab",
+						"type": "integer"
+					}
+				]
+			},
+			{
+				"name": "headers",
+				"type": "function",
+				"async": true,
+				"parameters": [
+					{
+						"name": "tab",
+						"type": "integer"
+					}
+				]
+			},
+			{
+				"name": "unlock",
+				"type": "function",
+				"async": true,
+				"parameters": [
+					{
+						"name": "tab",
+						"type": "integer"
+					}
+				]
+			},
+			{
+				"name": "send",
+				"type": "function",
+				"async": true,
+				"parameters": [
+					{
+						"name": "tab",
+						"type": "integer"
+					},
+					{
+						"name": "details",
+						"type": "any"
+					},
+					{
+						"name": "extras",
+						"type": "any"
+					}
+				]
+			}
+		]
+	}
+]

@@ -1,0 +1,163 @@
+{
+	
+	"mailmerge.dialog" : { "message" : "Mail Merge" },
+	
+	"mailmerge.dialog.legend.source" : { "message" : "Źródło" },
+	
+	"mailmerge.dialog.source" : { "message" : "Źródło:" },
+	"mailmerge.dialog.source.cardbook" : { "message" : "CardBook" },
+	"mailmerge.dialog.source.addressbook" : { "message" : "Książka adresowa" },
+	"mailmerge.dialog.source.csv" : { "message" : "CSV" },
+	"mailmerge.dialog.source.json" : { "message" : "JSON" },
+	"mailmerge.dialog.source.xlsx" : { "message" : "XLSX" },
+	
+	"mailmerge.dialog.cardbook.addressbook" : { "message" : "Książka adresowa:" },
+	"mailmerge.dialog.cardbook.addressbook.addressbooks" : { "message" : "Wszystkie książki adresowe" },
+	
+	"mailmerge.dialog.addressbook.addressbook" : { "message" : "Książka adresowa:" },
+	"mailmerge.dialog.addressbook.addressbook.addressbooks" : { "message" : "Wszystkie książki adresowe" },
+	
+	"mailmerge.dialog.csv.file" : { "message" : "Plik:" },
+	"mailmerge.dialog.csv.characterset" : { "message" : "Zestaw znaków:" },
+	"mailmerge.dialog.csv.fielddelimiter" : { "message" : "Separator pola:" },
+	"mailmerge.dialog.csv.fielddelimiter.automatic" : { "message" : "Automatyczny" },
+	
+	"mailmerge.dialog.json.file" : { "message" : "Plik:" },
+	
+	"mailmerge.dialog.xlsx.file" : { "message" : "Plik:" },
+	"mailmerge.dialog.xlsx.sheetname" : { "message" : "Nazwa arkusza:" },
+	
+	"mailmerge.dialog.legend.attachments" : { "message" : "Załączniki" },
+	
+	"mailmerge.dialog.attachments.attachments" : { "message" : "Załączniki:" },
+	
+	"mailmerge.dialog.legend.batch" : { "message" : "Seria" },
+	
+	"mailmerge.dialog.batch.pause" : { "message" : "Przerwa:" },
+	"mailmerge.dialog.batch.pause.random" : { "message" : "Losowo" },
+	"mailmerge.dialog.batch.start" : { "message" : "Początek:" },
+	"mailmerge.dialog.batch.stop" : { "message" : "Koniec:" },
+	
+	"mailmerge.dialog.legend.send" : { "message" : "Wysyłka" },
+	
+	"mailmerge.dialog.delivermode" : { "message" : "Tryb doręczenia:" },
+	"mailmerge.dialog.delivermode.saveasdraft" : { "message" : "Zapisz jako szkic" },
+	"mailmerge.dialog.delivermode.sendlater" : { "message" : "Wyślij później" },
+	"mailmerge.dialog.delivermode.sendnow" : { "message" : "Wyślij teraz" },
+	
+	"mailmerge.dialog.sendlater.at" : { "message" : "Wyślij:" },
+	"mailmerge.dialog.sendlater.recur" : { "message" : "Powtórz:" },
+	"mailmerge.dialog.sendlater.recur.none" : { "message" : "Żaden" },
+	"mailmerge.dialog.sendlater.recur.minutely" : { "message" : "Co minutę" },
+	"mailmerge.dialog.sendlater.recur.daily" : { "message" : "Co dzień" },
+	"mailmerge.dialog.sendlater.recur.weekly" : { "message" : "Co tydzień" },
+	"mailmerge.dialog.sendlater.recur.monthly" : { "message" : "Co miesiąc" },
+	"mailmerge.dialog.sendlater.recur.yearly" : { "message" : "Co rok" },
+	"mailmerge.dialog.sendlater.every" : { "message" : "Co ile:" },
+	"mailmerge.dialog.sendlater.between" : { "message" : "Pomiędzy:" },
+	"mailmerge.dialog.sendlater.only" : { "message" : "Tylko w:" },
+	"mailmerge.dialog.sendlater.only.sunday" : { "message" : "Niedzielę" },
+	"mailmerge.dialog.sendlater.only.monday" : { "message" : "Poniedziałek" },
+	"mailmerge.dialog.sendlater.only.tuesday" : { "message" : "Wtorek" },
+	"mailmerge.dialog.sendlater.only.wednesday" : { "message" : "Środę" },
+	"mailmerge.dialog.sendlater.only.thursday" : { "message" : "Czwartek" },
+	"mailmerge.dialog.sendlater.only.friday" : { "message" : "Piątek" },
+	"mailmerge.dialog.sendlater.only.saturday" : { "message" : "Sobotę" },
+	"mailmerge.dialog.sendlater.until" : { "message" : "Aż do:" },
+	
+	"mailmerge.dialog.load" : { "message" : "Załaduj" },
+	"mailmerge.dialog.load.title" : { "message" : "Załaduj ustawienia" },
+	"mailmerge.dialog.reset" : { "message" : "Zresetuj" },
+	"mailmerge.dialog.reset.title" : { "message" : "Zresetuj ustawienia" },
+	"mailmerge.dialog.save" : { "message" : "Zapisz" },
+	"mailmerge.dialog.save.title" : { "message" : "Zapisz ustawienia" },
+	
+	"mailmerge.dialog.about" : { "message" : "O dodatku" },
+	"mailmerge.dialog.about.title" : { "message" : "O Mail Merge" },
+	"mailmerge.dialog.file" : { "message" : "Plik" },
+	"mailmerge.dialog.file.title" : { "message" : "Podgląd pliku" },
+	"mailmerge.dialog.message" : { "message" : "Wiadomość" },
+	"mailmerge.dialog.message.title" : { "message" : "Podgląd wiadomości" },
+	"mailmerge.dialog.send" : { "message" : "Wysyłka" },
+	"mailmerge.dialog.send.title" : { "message" : "Wysyłka wiadomość" },
+	
+	"mailmerge.about" : { "message" : "O dodatku" },
+	
+	"mailmerge.about.version" : { "message" : "Version:" },
+	"mailmerge.about.developer" : { "message" : "Developer:" },
+	"mailmerge.about.support" : { "message" : "Support:" },
+	"mailmerge.about.homepage" : { "message" : "Homepage:" },
+	"mailmerge.about.changelog" : { "message" : "Changelog:" },
+	"mailmerge.about.license" : { "message" : "License:" },
+	
+	"mailmerge.file" : { "message" : "Plik" },
+	
+	"mailmerge.message" : { "message" : "Wiadomość" },
+	
+	"mailmerge.message.from" : { "message" : "Od:" },
+	"mailmerge.message.to" : { "message" : "Do:" },
+	"mailmerge.message.cc" : { "message" : "Kopia:" },
+	"mailmerge.message.bcc" : { "message" : "Ukryta kopia:" },
+	"mailmerge.message.reply" : { "message" : "Odpowiedź:" },
+	"mailmerge.message.subject" : { "message" : "Temat:" },
+	"mailmerge.message.body" : { "message" : "Treść:" },
+	"mailmerge.message.attachments" : { "message" : "Załączniki:" },
+	"mailmerge.message.customheaders" : { "message" : "Niestandardowe nagłówki:" },
+	
+	"mailmerge.message.index" : { "message" : "Bieżąca wiadomość" },
+	
+	"mailmerge.message.begin" : { "message" : "<<" },
+	"mailmerge.message.begin.title" : { "message" : "Pierwsza wiadomość" },
+	"mailmerge.message.previous" : { "message" : "<" },
+	"mailmerge.message.previous.title" : { "message" : "Poprzednia wiadomość" },
+	"mailmerge.message.next" : { "message" : ">" },
+	"mailmerge.message.next.title" : { "message" : "Następna wiadomość" },
+	"mailmerge.message.end" : { "message" : ">>" },
+	"mailmerge.message.end.title" : { "message" : "Ostatnia wiadomość" },
+	
+	"mailmerge.send" : { "message" : "Wysyłka" },
+	
+	"mailmerge.send.current" : { "message" : "Bieżąca wiadomość:" },
+	"mailmerge.send.total" : { "message" : "Całkowita liczba wiadomości:" },
+	"mailmerge.send.time" : { "message" : "Czas:" },
+	
+	"mailmerge.send.start" : { "message" : "Rozpocznij" },
+	"mailmerge.send.start.title" : { "message" : "Rozpocznij" },
+	
+	"mailmerge.options" : { "message" : "Opcje" },
+	
+	"mailmerge.options.legend.options" : { "message" : "Opcje" },
+	
+	"mailmerge.options.saveastemplate" : { "message" : "Zapisz jako szablon:" },
+	"mailmerge.options.recipientsreminder" : { "message" : "Przypomnienie o odbiorcach:" },
+	"mailmerge.options.variablesreminder" : { "message" : "Przypomnienie o zmiennych:" },
+	
+	"mailmerge.options.legend.beta" : { "message" : "Beta" },
+	
+	"mailmerge.options.beta" : { "message" : "Beta:" },
+	
+	"mailmerge.options.load" : { "message" : "Załaduj" },
+	"mailmerge.options.load.title" : { "message" : "Załaduj ustawienia" },
+	"mailmerge.options.reset" : { "message" : "Zresetuj" },
+	"mailmerge.options.reset.title" : { "message" : "Zresetuj ustawienia" },
+	"mailmerge.options.save" : { "message" : "Zapisz" },
+	"mailmerge.options.save.title" : { "message" : "Zapisz ustawienia" },
+	
+	"mailmerge.betawarning.title" : { "message" : "Beta Warning" },
+	"mailmerge.betawarning.message" : { "message" : "Use \"Beta\" at your own risk!" },
+	
+	"mailmerge.encryptionwarning.title" : { "message" : "Encryption Warning" },
+	"mailmerge.encryptionwarning.message" : { "message" : "Mail Merge does not support encrypting or signing messages via OpenPGP or S/MIME!\n\nThe individual and personalized messages created by Mail Merge will neither be encrypted nor signed." },
+	
+	"mailmerge.delivermodewarning.title" : { "message" : "Ostrzeżenie o trybie doręczenia" },
+	"mailmerge.delivermodewarning.message" : { "message" : "Używasz \"Wyślij teraz\" jako \"Tryb doręczenia\" na twoje własne ryzyko!\n\nZaleca się używanie \"Wyślij później\" jako \"Tryb doręczenia\" i sprawdzenie indywidualnych i spersonalizowanych wiadomości w folderze \"Lokalne foldery -> Wychodzące\". Błędy w programie Thunderbird, błędy w Mail Merge oraz błędy w innych dodatkach mogą prowadzić do nieoczekiwanych i niepożądanych rezultatów." },
+	
+	"mailmerge.recipientsreminder.title" : { "message" : "Przypomnienie o odbiorcach" },
+	"mailmerge.recipientsreminder.message" : { "message" : "Wiadomość zawiera wielu odbiorców.\n\nThe \"Przypomnienie o odbiorcach\" zapobiega przypadkowemu kliknięciu \"Wyślij teraz\" lub \"Wyślij później\". Aby uruchomić Mail Merge proszę wcisnąć \"Anuluj\" i użyć menu \"Narzędzia -> Mail Merge\" lub przycisku paska narzędzi \"Mail Merge\"." },
+	
+	"mailmerge.variablesreminder.title" : { "message" : "Przypomnienie o zmiennych" },
+	"mailmerge.variablesreminder.message" : { "message" : "Wiadomość zawiera zmienne.\n\nThe \"Przypomnienie o zmiennych\" zapobiega przypadkowemu kliknięciu \"Wyślij teraz\" lub \"Wyślij później\". Aby uruchomić Mail Merge proszę wcisnąć \"Anuluj\" i użyć menu \"Narzędzia -> Mail Merge\" lub przycisku paska narzędzi \"Mail Merge\"." },
+	
+	"mailmerge.notifications.finished" : { "message" : "Mail Merge zakończył działanie.\n$1 wiadomości stworzono w czasie $2." }
+	
+}

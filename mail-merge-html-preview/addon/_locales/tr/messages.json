@@ -1,0 +1,193 @@
+{
+	
+	"mailmerge.dialog" : { "message" : "Mail Merge" },
+	
+	"mailmerge.dialog.legend.source" : { "message" : "Kaynak" },
+	
+	"mailmerge.dialog.source" : { "message" : "Kaynak:" },
+	"mailmerge.dialog.source.cardbook" : { "message" : "CardBook" },
+	"mailmerge.dialog.source.addressbook" : { "message" : "Adres defteri" },
+	"mailmerge.dialog.source.csv" : { "message" : "CSV" },
+	"mailmerge.dialog.source.json" : { "message" : "JSON" },
+	"mailmerge.dialog.source.xlsx" : { "message" : "XLSX" },
+	
+	"mailmerge.dialog.cardbook.addressbook" : { "message" : "Adres defteri:" },
+	"mailmerge.dialog.cardbook.addressbook.addressbooks" : { "message" : "Tüm adres defterleri" },
+	
+	"mailmerge.dialog.addressbook.addressbook" : { "message" : "Adres defteri:" },
+	"mailmerge.dialog.addressbook.addressbook.addressbooks" : { "message" : "Tüm adres defterleri" },
+	
+	"mailmerge.dialog.csv.file" : { "message" : "Dosya:" },
+	"mailmerge.dialog.csv.characterset" : { "message" : "Karakter kümesi:" },
+	"mailmerge.dialog.csv.fielddelimiter" : { "message" : "Alan sınırlayıcı:" },
+	"mailmerge.dialog.csv.fielddelimiter.automatic" : { "message" : "Otomatik" },
+	
+	"mailmerge.dialog.json.file" : { "message" : "Dosya:" },
+	
+	"mailmerge.dialog.xlsx.file" : { "message" : "Dosya:" },
+	"mailmerge.dialog.xlsx.sheetname" : { "message" : "Sayfa Adı:" },
+	
+	"mailmerge.dialog.legend.attachments" : { "message" : "Ekler" },
+	
+	"mailmerge.dialog.attachments.attachments" : { "message" : "Ekler:" },
+	
+	"mailmerge.dialog.legend.batch" : { "message" : "Yığın" },
+	
+	"mailmerge.dialog.batch.pause" : { "message" : "Duraklat:" },
+	"mailmerge.dialog.batch.pause.random" : { "message" : "Rastgele" },
+	"mailmerge.dialog.batch.start" : { "message" : "Başlat:" },
+	"mailmerge.dialog.batch.stop" : { "message" : "Dur:" },
+	
+	"mailmerge.dialog.legend.send" : { "message" : "Gönder" },
+	
+	"mailmerge.dialog.delivermode" : { "message" : "Gönderim modu:" },
+	"mailmerge.dialog.delivermode.saveasdraft" : { "message" : "Taslak Olarak Kaydet" },
+	"mailmerge.dialog.delivermode.sendlater" : { "message" : "Daha Sonra Gönder" },
+	"mailmerge.dialog.delivermode.sendnow" : { "message" : "Şimdi Gönder" },
+	
+	"mailmerge.dialog.sendlater.at" : { "message" : "Şu zamanda:" },
+	"mailmerge.dialog.sendlater.recur" : { "message" : "Tekrarla:" },
+	"mailmerge.dialog.sendlater.recur.none" : { "message" : "Hiçbiri" },
+	"mailmerge.dialog.sendlater.recur.minutely" : { "message" : "Dakikalık" },
+	"mailmerge.dialog.sendlater.recur.daily" : { "message" : "Günlük" },
+	"mailmerge.dialog.sendlater.recur.weekly" : { "message" : "Haftalık" },
+	"mailmerge.dialog.sendlater.recur.monthly" : { "message" : "Aylık" },
+	"mailmerge.dialog.sendlater.recur.yearly" : { "message" : "Yıllık" },
+	"mailmerge.dialog.sendlater.every" : { "message" : "Her:" },
+	"mailmerge.dialog.sendlater.between" : { "message" : "Arasında:" },
+	"mailmerge.dialog.sendlater.only" : { "message" : "Sadece:" },
+	"mailmerge.dialog.sendlater.only.sunday" : { "message" : "Pazar" },
+	"mailmerge.dialog.sendlater.only.monday" : { "message" : "Pazartesi" },
+	"mailmerge.dialog.sendlater.only.tuesday" : { "message" : "Salı" },
+	"mailmerge.dialog.sendlater.only.wednesday" : { "message" : "Çarşamba" },
+	"mailmerge.dialog.sendlater.only.thursday" : { "message" : "Perşembe" },
+	"mailmerge.dialog.sendlater.only.friday" : { "message" : "Cuma" },
+	"mailmerge.dialog.sendlater.only.saturday" : { "message" : "Cumartesi" },
+	"mailmerge.dialog.sendlater.until" : { "message" : "Şu zamana kadar:" },
+	
+	"mailmerge.dialog.load" : { "message" : "Yükle" },
+	"mailmerge.dialog.load.title" : { "message" : "Load the Settings" },
+	"mailmerge.dialog.reset" : { "message" : "Sıfırla" },
+	"mailmerge.dialog.reset.title" : { "message" : "Reset the Settings" },
+	"mailmerge.dialog.save" : { "message" : "Kaydet" },
+	"mailmerge.dialog.save.title" : { "message" : "Save the Settings" },
+	
+	"mailmerge.dialog.about" : { "message" : "Hakkında" },
+	"mailmerge.dialog.about.title" : { "message" : "About Mail Merge" },
+	"mailmerge.dialog.file" : { "message" : "Dosya" },
+	"mailmerge.dialog.file.title" : { "message" : "Preview the File" },
+	"mailmerge.dialog.message" : { "message" : "Mesaj" },
+	"mailmerge.dialog.message.title" : { "message" : "Preview the Message" },
+	"mailmerge.dialog.send" : { "message" : "Gönder" },
+	"mailmerge.dialog.send.title" : { "message" : "Send the Message" },
+	
+	"mailmerge.about" : { "message" : "Hakkında" },
+	
+	"mailmerge.about.version" : { "message" : "Version:" },
+	"mailmerge.about.developer" : { "message" : "Developer:" },
+	"mailmerge.about.support" : { "message" : "Support:" },
+	"mailmerge.about.homepage" : { "message" : "Homepage:" },
+	"mailmerge.about.changelog" : { "message" : "Changelog:" },
+	"mailmerge.about.license" : { "message" : "License:" },
+	
+	"mailmerge.file" : { "message" : "Dosya" },
+	
+	"mailmerge.message" : { "message" : "Mesaj" },
+	
+	"mailmerge.message.from" : { "message" : "Gönderen:" },
+	"mailmerge.message.to" : { "message" : "Alıcı:" },
+	"mailmerge.message.cc" : { "message" : "Cc:" },
+	"mailmerge.message.bcc" : { "message" : "Bcc:" },
+	"mailmerge.message.reply" : { "message" : "Yanıt:" },
+	"mailmerge.message.subject" : { "message" : "Konu:" },
+	"mailmerge.message.body" : { "message" : "İleti İçeriği:" },
+	"mailmerge.message.attachments" : { "message" : "Ekler:" },
+	"mailmerge.message.customheaders" : { "message" : "Özel Başlıklar:" },
+	
+	"mailmerge.message.index" : { "message" : "Dizin" },
+	
+	"mailmerge.message.begin" : { "message" : "<<" },
+	"mailmerge.message.begin.title" : { "message" : "Başlangıç" },
+	"mailmerge.message.previous" : { "message" : "<" },
+	"mailmerge.message.previous.title" : { "message" : "Önceki" },
+	"mailmerge.message.next" : { "message" : ">" },
+	"mailmerge.message.next.title" : { "message" : "Sonraki" },
+	"mailmerge.message.end" : { "message" : ">>" },
+	"mailmerge.message.end.title" : { "message" : "Son" },
+	
+	"mailmerge.send" : { "message" : "Gönder" },
+	
+	"mailmerge.send.current" : { "message" : "Şu an:" },
+	"mailmerge.send.total" : { "message" : "Toplam:" },
+	"mailmerge.send.time" : { "message" : "Geçen Süre:" },
+	
+	"mailmerge.send.start" : { "message" : "Başlat" },
+	"mailmerge.send.start.title" : { "message" : "Başlat" },
+	
+	"mailmerge.options" : { "message" : "Ayarlar" },
+	
+	"mailmerge.options.legend.options" : { "message" : "Ayarlar" },
+	
+	"mailmerge.options.saveastemplate" : { "message" : "Taslak Olarak Kaydet:" },
+	"mailmerge.options.recipientsreminder" : { "message" : "Alıcı Hatırlatması:" },
+	"mailmerge.options.variablesreminder" : { "message" : "Değişken Hatırlatması:" },
+	
+	"mailmerge.options.legend.beta" : { "message" : "Beta" },
+	
+	"mailmerge.options.beta" : { "message" : "Beta:" },
+	
+	"mailmerge.options.load" : { "message" : "Yükle" },
+	"mailmerge.options.load.title" : { "message" : "Load the Settings" },
+	"mailmerge.options.reset" : { "message" : "Sıfırla" },
+	"mailmerge.options.reset.title" : { "message" : "Reset the Settings" },
+	"mailmerge.options.save" : { "message" : "Kaydet" },
+	"mailmerge.options.save.title" : { "message" : "Save the Settings" },
+	
+	"mailmerge.betawarning.title" : { "message" : "Beta Warning" },
+	"mailmerge.betawarning.message" : { "message" : "Use \"Beta\" at your own risk!" },
+	
+	"mailmerge.encryptionwarning.title" : { "message" : "Encryption Warning" },
+	"mailmerge.encryptionwarning.message" : { "message" : "Mail Merge does not support encrypting or signing messages via OpenPGP or S/MIME!\n\nThe individual and personalized messages created by Mail Merge will neither be encrypted nor signed." },
+	
+	"mailmerge.delivermodewarning.title" : { "message" : "Gönderim Modu Uyarısı" },
+	"mailmerge.delivermodewarning.message" : { "message" : "\"Gönderim Modu\"'nda \"Şimdi Gönder\"'i kendi sorumluluğunuzda kullanın!\n\n\"Gönderim Modu\"'nda \"Daha Sonra Gönder\"'i kullanmanız ve \"Yerel Dosyalar -> Giden Kutusu\" klasöründeki bireysel ve kişiselleştirilmiş mesajları kontrol etmeniz şiddetle tavsiye edilir. Thunderbird'deki, Mail Merge'deki ve diğer eklentilerdeki buglar beklenmeyen ve istenmeyen sonuçlara yol açabilir." },
+	
+	"mailmerge.recipientsreminder.title" : { "message" : "Alıcı Hatırlatması" },
+	"mailmerge.recipientsreminder.message" : { "message" : "Bu mesaj birden fazla alıcı barındırmaktadır.\n\n\"Alıcı Hatırlatması\" yanlışlıkla \"Şimdi Gönder\" ya da \"Daha Sonra Gönder\"'e tıklamanızı önleyecektir. Mail Merge'yi başlatmak için lütfen \"İptal\" butonuna basınız ve \"Araçlar -> Mail Merge\" menüsünü ya da \"Mail Merge\" araç kutusunu kullanın." },
+	
+	"mailmerge.variablesreminder.title" : { "message" : "Değişken Hatırlatması" },
+	"mailmerge.variablesreminder.message" : { "message" : "Bu mesaj değişkenler barındırıyor.\n\n\"Değişkenler Hatırlatması\" yanlışlıkla \"Şimdi Gönder\" ya da \"Daha Sonra Gönder\"'e tıklamanızı önleyecektir. Mail Merge'yi başlatmak için lütfen \"İptal\" butonuna basınız ve \"Araçlar -> Mail Merge\" menüsünü ya da \"Mail Merge\" araç kutusunu kullanın." },
+	
+	"mailmerge.notifications.finished" : { "message" : "Mail Merge tamamlandı.\n$1 tane mesaj $2 süre içinde tamamlandı." },
+	
+	"mailmerge.preview.wide" : { "message" : "Bilgisayar" },
+	
+	"mailmerge.preview.mobile" : { "message" : "Telefon" },
+	
+	"mailmerge.preview.tools" : { "message" : "Önizleme genişliği" },
+	
+	"mailmerge.preview.frame" : { "message" : "İleti önizlemesi" },
+	
+	"mailmerge.preview.unknown" : { "message" : "Veride bulunmayan alanlar: $1" },
+	
+	"mailmerge.preview.formatting" : { "message" : "{{ }} içindeki biçimlendirmeyi kaldırın ya da alanı yeniden yazın." },
+	
+	"mailmerge.preview.empty" : { "message" : "Bu alıcıda boş kalan alanlar: $1" },
+	
+	"mailmerge.preview.unresolved" : { "message" : "Yerine konamayan ifadeler: $1" },
+	
+	"mailmerge.preview.summary" : { "message" : "Boş alanı olan alıcı: $1 / $2" },
+	
+	"mailmerge.preview.summary.next" : { "message" : "Sıradakine git" },
+	
+	"mailmerge.preview.plaintext" : { "message" : "Teslim biçimi yalnızca düz metin: alıcılar bu biçimlendirmeyi görmeyecek." },
+	
+	"mailmerge.preview.remote" : { "message" : "Yüklenmeyen uzak resim: $1" },
+	
+	"mailmerge.preview.remote.load" : { "message" : "Uzak resimleri göster" },
+	
+	"mailmerge.preview.unavailable" : { "message" : "Bu önizlemede gösterilemeyen resim: $1" },
+	
+	"mailmerge.preview.image" : { "message" : "Önizlemede gösterilemiyor: $1" }
+	
+}

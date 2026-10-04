@@ -1,0 +1,15 @@
+{
+  "name": "mail-merge-html-preview",
+  "private": true,
+  "description": "Tests and packaging for Mail Merge (HTML Preview)",
+  "license": "GPL-3.0",
+  "scripts": {
+    "build": "python3 build.py",
+    "test": "node test/preview.cjs",
+    "test:thunderbird": "node test/thunderbird.cjs",
+    "screenshots": "node test/preview.cjs --screenshots && node test/thunderbird.cjs --screenshots"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^25.12.0"
+  }
+}

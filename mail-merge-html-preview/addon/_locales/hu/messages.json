@@ -1,0 +1,163 @@
+{
+	
+	"mailmerge.dialog" : { "message" : "Mail Merge" },
+	
+	"mailmerge.dialog.legend.source" : { "message" : "Forrás" },
+	
+	"mailmerge.dialog.source" : { "message" : "Forrás:" },
+	"mailmerge.dialog.source.cardbook" : { "message" : "CardBook" },
+	"mailmerge.dialog.source.addressbook" : { "message" : "Címjegyzék" },
+	"mailmerge.dialog.source.csv" : { "message" : "CSV" },
+	"mailmerge.dialog.source.json" : { "message" : "JSON" },
+	"mailmerge.dialog.source.xlsx" : { "message" : "XLSX" },
+	
+	"mailmerge.dialog.cardbook.addressbook" : { "message" : "Címjegyzék:" },
+	"mailmerge.dialog.cardbook.addressbook.addressbooks" : { "message" : "Minden címjegyzék" },
+	
+	"mailmerge.dialog.addressbook.addressbook" : { "message" : "Címjegyzék:" },
+	"mailmerge.dialog.addressbook.addressbook.addressbooks" : { "message" : "Minden címjegyzék" },
+	
+	"mailmerge.dialog.csv.file" : { "message" : "Fájl:" },
+	"mailmerge.dialog.csv.characterset" : { "message" : "Karakterkészlet:" },
+	"mailmerge.dialog.csv.fielddelimiter" : { "message" : "Mezőelválasztó:" },
+	"mailmerge.dialog.csv.fielddelimiter.automatic" : { "message" : "Automatikus" },
+	
+	"mailmerge.dialog.json.file" : { "message" : "Fájl:" },
+	
+	"mailmerge.dialog.xlsx.file" : { "message" : "Fájl:" },
+	"mailmerge.dialog.xlsx.sheetname" : { "message" : "Munkalap neve:" },
+	
+	"mailmerge.dialog.legend.attachments" : { "message" : "Mellékletek" },
+	
+	"mailmerge.dialog.attachments.attachments" : { "message" : "Mellékletek:" },
+	
+	"mailmerge.dialog.legend.batch" : { "message" : "Kötegelés" },
+	
+	"mailmerge.dialog.batch.pause" : { "message" : "Szünet:" },
+	"mailmerge.dialog.batch.pause.random" : { "message" : "Véletlenszerű" },
+	"mailmerge.dialog.batch.start" : { "message" : "Első:" },
+	"mailmerge.dialog.batch.stop" : { "message" : "Utolsó:" },
+	
+	"mailmerge.dialog.legend.send" : { "message" : "Küldés" },
+	
+	"mailmerge.dialog.delivermode" : { "message" : "Kézbesítési mód:" },
+	"mailmerge.dialog.delivermode.saveasdraft" : { "message" : "Mentés piszkozatként" },
+	"mailmerge.dialog.delivermode.sendlater" : { "message" : "Küldés később" },
+	"mailmerge.dialog.delivermode.sendnow" : { "message" : "Küldés azonnal" },
+	
+	"mailmerge.dialog.sendlater.at" : { "message" : "Ekkor:" },
+	"mailmerge.dialog.sendlater.recur" : { "message" : "Ismétlődés:" },
+	"mailmerge.dialog.sendlater.recur.none" : { "message" : "Nincs" },
+	"mailmerge.dialog.sendlater.recur.minutely" : { "message" : "Percenként" },
+	"mailmerge.dialog.sendlater.recur.daily" : { "message" : "Naponta" },
+	"mailmerge.dialog.sendlater.recur.weekly" : { "message" : "Hetente" },
+	"mailmerge.dialog.sendlater.recur.monthly" : { "message" : "Havonta" },
+	"mailmerge.dialog.sendlater.recur.yearly" : { "message" : "Évente" },
+	"mailmerge.dialog.sendlater.every" : { "message" : "Minden egyes:" },
+	"mailmerge.dialog.sendlater.between" : { "message" : "Között:" },
+	"mailmerge.dialog.sendlater.only" : { "message" : "Csak:" },
+	"mailmerge.dialog.sendlater.only.sunday" : { "message" : "Vasárnap" },
+	"mailmerge.dialog.sendlater.only.monday" : { "message" : "Hétfő" },
+	"mailmerge.dialog.sendlater.only.tuesday" : { "message" : "Kedd" },
+	"mailmerge.dialog.sendlater.only.wednesday" : { "message" : "Szerda" },
+	"mailmerge.dialog.sendlater.only.thursday" : { "message" : "Csütörtök" },
+	"mailmerge.dialog.sendlater.only.friday" : { "message" : "Péntek" },
+	"mailmerge.dialog.sendlater.only.saturday" : { "message" : "Szombat" },
+	"mailmerge.dialog.sendlater.until" : { "message" : "Eddig:" },
+	
+	"mailmerge.dialog.load" : { "message" : "Betöltés" },
+	"mailmerge.dialog.load.title" : { "message" : "Beállítások betöltése" },
+	"mailmerge.dialog.reset" : { "message" : "Alapállapot" },
+	"mailmerge.dialog.reset.title" : { "message" : "Beállítások visszaállítása alapállapotba" },
+	"mailmerge.dialog.save" : { "message" : "Mentés" },
+	"mailmerge.dialog.save.title" : { "message" : "Beállítások mentése" },
+	
+	"mailmerge.dialog.about" : { "message" : "Névjegy" },
+	"mailmerge.dialog.about.title" : { "message" : "Mail Merge névjegye" },
+	"mailmerge.dialog.file" : { "message" : "Fájl" },
+	"mailmerge.dialog.file.title" : { "message" : "Fájl előnézete" },
+	"mailmerge.dialog.message" : { "message" : "Üzenet" },
+	"mailmerge.dialog.message.title" : { "message" : "Üzenet előnézete" },
+	"mailmerge.dialog.send" : { "message" : "Küldés" },
+	"mailmerge.dialog.send.title" : { "message" : "Üzenet elküldése" },
+	
+	"mailmerge.about" : { "message" : "Névjegy" },
+	
+	"mailmerge.about.version" : { "message" : "Version:" },
+	"mailmerge.about.developer" : { "message" : "Developer:" },
+	"mailmerge.about.support" : { "message" : "Support:" },
+	"mailmerge.about.homepage" : { "message" : "Homepage:" },
+	"mailmerge.about.changelog" : { "message" : "Changelog:" },
+	"mailmerge.about.license" : { "message" : "License:" },
+	
+	"mailmerge.file" : { "message" : "Fájl" },
+	
+	"mailmerge.message" : { "message" : "Üzenet" },
+	
+	"mailmerge.message.from" : { "message" : "Feladó:" },
+	"mailmerge.message.to" : { "message" : "Címzett:" },
+	"mailmerge.message.cc" : { "message" : "Másolat:" },
+	"mailmerge.message.bcc" : { "message" : "Rejtett másolat:" },
+	"mailmerge.message.reply" : { "message" : "Válaszcím:" },
+	"mailmerge.message.subject" : { "message" : "Tárgy:" },
+	"mailmerge.message.body" : { "message" : "Törzs:" },
+	"mailmerge.message.attachments" : { "message" : "Mellékletek:" },
+	"mailmerge.message.customheaders" : { "message" : "Egyéni fejlécek:" },
+	
+	"mailmerge.message.index" : { "message" : "Sorszám" },
+	
+	"mailmerge.message.begin" : { "message" : "<<" },
+	"mailmerge.message.begin.title" : { "message" : "Első" },
+	"mailmerge.message.previous" : { "message" : "<" },
+	"mailmerge.message.previous.title" : { "message" : "Előző" },
+	"mailmerge.message.next" : { "message" : ">" },
+	"mailmerge.message.next.title" : { "message" : "Következő" },
+	"mailmerge.message.end" : { "message" : ">>" },
+	"mailmerge.message.end.title" : { "message" : "Utolsó" },
+	
+	"mailmerge.send" : { "message" : "Küldés" },
+	
+	"mailmerge.send.current" : { "message" : "Jelenlegi:" },
+	"mailmerge.send.total" : { "message" : "Összes:" },
+	"mailmerge.send.time" : { "message" : "Idő:" },
+	
+	"mailmerge.send.start" : { "message" : "Kezdés" },
+	"mailmerge.send.start.title" : { "message" : "Kezdés" },
+	
+	"mailmerge.options" : { "message" : "Beállítások" },
+	
+	"mailmerge.options.legend.options" : { "message" : "Beállítások" },
+	
+	"mailmerge.options.saveastemplate" : { "message" : "Mentés sablonként:" },
+	"mailmerge.options.recipientsreminder" : { "message" : "Emlékeztető a címzettekre:" },
+	"mailmerge.options.variablesreminder" : { "message" : "Emlékeztető a változókra:" },
+	
+	"mailmerge.options.legend.beta" : { "message" : "Beta" },
+	
+	"mailmerge.options.beta" : { "message" : "Beta:" },
+	
+	"mailmerge.options.load" : { "message" : "Betöltés" },
+	"mailmerge.options.load.title" : { "message" : "Beállítások betöltése" },
+	"mailmerge.options.reset" : { "message" : "Alapállapot" },
+	"mailmerge.options.reset.title" : { "message" : "Beállítások visszaállítása alapállapotba" },
+	"mailmerge.options.save" : { "message" : "Mentés" },
+	"mailmerge.options.save.title" : { "message" : "Beállítások mentése" },
+	
+	"mailmerge.betawarning.title" : { "message" : "Beta Warning" },
+	"mailmerge.betawarning.message" : { "message" : "Use \"Beta\" at your own risk!" },
+	
+	"mailmerge.encryptionwarning.title" : { "message" : "Titkosítási figyelmeztetés" },
+	"mailmerge.encryptionwarning.message" : { "message" : "A Mail Merge nem támogatja az üzenetek OpenPGP vagy S/MIME segítségével történő titkosítását vagy aláírását!\n\nA Mail Merge által létrehozott egyedi és személyre szabott üzenetek nem lesznek titkosítva vagy aláírva." },
+	
+	"mailmerge.delivermodewarning.title" : { "message" : "Küldési mód figyelmeztetés" },
+	"mailmerge.delivermodewarning.message" : { "message" : "A \"Küldés azonnal\" \"Kézbesítési mód\" csak saját felelősségre használható!\n\nInkább ajánlott a \"Küldés később\" \"Kézbesítési mód\" alkalmazása és a személyre szabott üzenetek ellenőrzése a \"Helyi mappák -> Postázandó üzenetek\" mappában. Előfordulhat, hogy a Thunderbirdben, vagy a Mail Merge és más bővítményekben lévő hibák okozhatnak váratlan és nem kívánt eredményeket." },
+	
+	"mailmerge.recipientsreminder.title" : { "message" : "Emlékeztető a címzettekre" },
+	"mailmerge.recipientsreminder.message" : { "message" : "Az üzenet több címzettet tartalmaz.\n\nAz \"Emlékeztető a címzettekre\" beállítás megakadályozza a \"Küldés azonnal\" vagy a \"Küldés később\" gombokra való véletlen kattintást. A Mail Merge előbb a \"Mégsem\" gombra való kattintással majd a \"Eszközök -> Mail Merge\" menüponttal vagy a \"Mail Merge\" eszköztárgombbal indítható." },
+	
+	"mailmerge.variablesreminder.title" : { "message" : "Emlékeztető a változókra" },
+	"mailmerge.variablesreminder.message" : { "message" : "Az üzenet változókat tartalmaz.\n\nAz \"Emlékeztető a változókra\" beállítás megakadályozza a \"Küldés azonnal\" vagy a \"Küldés később\" gombokra való véletlen kattintást. A Mail Merge előbb a \"Mégsem\" gombra való kattintással majd a \"Eszközök -> Mail Merge\" menüponttal vagy a \"Mail Merge\" eszköztárgombbal indítható." },
+	
+	"mailmerge.notifications.finished" : { "message" : "A Mail Merge elkészült.\n$1 üzenet jött létre $2 idő alatt." }
+	
+}

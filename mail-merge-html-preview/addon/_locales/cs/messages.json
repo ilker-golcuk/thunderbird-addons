@@ -1,0 +1,163 @@
+{
+	
+	"mailmerge.dialog" : { "message" : "Mail Merge" },
+	
+	"mailmerge.dialog.legend.source" : { "message" : "Zdroj" },
+	
+	"mailmerge.dialog.source" : { "message" : "Zdroj:" },
+	"mailmerge.dialog.source.cardbook" : { "message" : "CardBook" },
+	"mailmerge.dialog.source.addressbook" : { "message" : "Adresář" },
+	"mailmerge.dialog.source.csv" : { "message" : "CSV" },
+	"mailmerge.dialog.source.json" : { "message" : "JSON" },
+	"mailmerge.dialog.source.xlsx" : { "message" : "XLSX" },
+	
+	"mailmerge.dialog.cardbook.addressbook" : { "message" : "Adresář:" },
+	"mailmerge.dialog.cardbook.addressbook.addressbooks" : { "message" : "Všechny adresáře" },
+	
+	"mailmerge.dialog.addressbook.addressbook" : { "message" : "Adresář:" },
+	"mailmerge.dialog.addressbook.addressbook.addressbooks" : { "message" : "Všechny adresáře" },
+	
+	"mailmerge.dialog.csv.file" : { "message" : "Soubor:" },
+	"mailmerge.dialog.csv.characterset" : { "message" : "Kódování znaků:" },
+	"mailmerge.dialog.csv.fielddelimiter" : { "message" : "Oddělovač polí:" },
+	"mailmerge.dialog.csv.fielddelimiter.automatic" : { "message" : "Automatické" },
+	
+	"mailmerge.dialog.json.file" : { "message" : "Soubor:" },
+	
+	"mailmerge.dialog.xlsx.file" : { "message" : "Soubor:" },
+	"mailmerge.dialog.xlsx.sheetname" : { "message" : "Jméno listu:" },
+	
+	"mailmerge.dialog.legend.attachments" : { "message" : "Přílohy" },
+	
+	"mailmerge.dialog.attachments.attachments" : { "message" : "Přílohy:" },
+	
+	"mailmerge.dialog.legend.batch" : { "message" : "Dávka" },
+	
+	"mailmerge.dialog.batch.pause" : { "message" : "Pozastavit:" },
+	"mailmerge.dialog.batch.pause.random" : { "message" : "Náhodný" },
+	"mailmerge.dialog.batch.start" : { "message" : "Začátek:" },
+	"mailmerge.dialog.batch.stop" : { "message" : "Konec:" },
+	
+	"mailmerge.dialog.legend.send" : { "message" : "Odeslat" },
+	
+	"mailmerge.dialog.delivermode" : { "message" : "Režim doručení:" },
+	"mailmerge.dialog.delivermode.saveasdraft" : { "message" : "Uložit jako koncept" },
+	"mailmerge.dialog.delivermode.sendlater" : { "message" : "Odeslat později" },
+	"mailmerge.dialog.delivermode.sendnow" : { "message" : "Odeslat nyní" },
+	
+	"mailmerge.dialog.sendlater.at" : { "message" : "V:" },
+	"mailmerge.dialog.sendlater.recur" : { "message" : "Opakovat:" },
+	"mailmerge.dialog.sendlater.recur.none" : { "message" : "Nikdy" },
+	"mailmerge.dialog.sendlater.recur.minutely" : { "message" : "Minutu" },
+	"mailmerge.dialog.sendlater.recur.daily" : { "message" : "Denně" },
+	"mailmerge.dialog.sendlater.recur.weekly" : { "message" : "Týdně" },
+	"mailmerge.dialog.sendlater.recur.monthly" : { "message" : "Měsíčně" },
+	"mailmerge.dialog.sendlater.recur.yearly" : { "message" : "Ročně" },
+	"mailmerge.dialog.sendlater.every" : { "message" : "Každý:" },
+	"mailmerge.dialog.sendlater.between" : { "message" : "Mezi:" },
+	"mailmerge.dialog.sendlater.only" : { "message" : "Pouze:" },
+	"mailmerge.dialog.sendlater.only.sunday" : { "message" : "Neděle" },
+	"mailmerge.dialog.sendlater.only.monday" : { "message" : "Pondělí" },
+	"mailmerge.dialog.sendlater.only.tuesday" : { "message" : "Úterý" },
+	"mailmerge.dialog.sendlater.only.wednesday" : { "message" : "Středa" },
+	"mailmerge.dialog.sendlater.only.thursday" : { "message" : "Čtvrtek" },
+	"mailmerge.dialog.sendlater.only.friday" : { "message" : "Pátek" },
+	"mailmerge.dialog.sendlater.only.saturday" : { "message" : "Sobota" },
+	"mailmerge.dialog.sendlater.until" : { "message" : "Do:" },
+	
+	"mailmerge.dialog.load" : { "message" : "Načíst" },
+	"mailmerge.dialog.load.title" : { "message" : "Načíst nastavení" },
+	"mailmerge.dialog.reset" : { "message" : "Obnovit" },
+	"mailmerge.dialog.reset.title" : { "message" : "Obnovit nastavení" },
+	"mailmerge.dialog.save" : { "message" : "Uložit" },
+	"mailmerge.dialog.save.title" : { "message" : "Uložit nastavení" },
+	
+	"mailmerge.dialog.about" : { "message" : "O rozšíření" },
+	"mailmerge.dialog.about.title" : { "message" : "O rozšíření Mail Merge" },
+	"mailmerge.dialog.file" : { "message" : "Soubor" },
+	"mailmerge.dialog.file.title" : { "message" : "Zobrazit náhled souboru" },
+	"mailmerge.dialog.message" : { "message" : "Zpráva" },
+	"mailmerge.dialog.message.title" : { "message" : "Zobrazit náhled zprávy" },
+	"mailmerge.dialog.send" : { "message" : "Odeslat" },
+	"mailmerge.dialog.send.title" : { "message" : "Odeslat zprávu" },
+	
+	"mailmerge.about" : { "message" : "O rozšíření" },
+	
+	"mailmerge.about.version" : { "message" : "Version:" },
+	"mailmerge.about.developer" : { "message" : "Developer:" },
+	"mailmerge.about.support" : { "message" : "Support:" },
+	"mailmerge.about.homepage" : { "message" : "Homepage:" },
+	"mailmerge.about.changelog" : { "message" : "Changelog:" },
+	"mailmerge.about.license" : { "message" : "License:" },
+	
+	"mailmerge.file" : { "message" : "Soubor" },
+	
+	"mailmerge.message" : { "message" : "Zpráva" },
+	
+	"mailmerge.message.from" : { "message" : "Od:" },
+	"mailmerge.message.to" : { "message" : "Komu:" },
+	"mailmerge.message.cc" : { "message" : "Cc:" },
+	"mailmerge.message.bcc" : { "message" : "Bcc:" },
+	"mailmerge.message.reply" : { "message" : "Odpověď:" },
+	"mailmerge.message.subject" : { "message" : "Předmět:" },
+	"mailmerge.message.body" : { "message" : "Tělo:" },
+	"mailmerge.message.attachments" : { "message" : "Přílohy:" },
+	"mailmerge.message.customheaders" : { "message" : "Vlastní hlavičky:" },
+	
+	"mailmerge.message.index" : { "message" : "Pořadí" },
+	
+	"mailmerge.message.begin" : { "message" : "<<" },
+	"mailmerge.message.begin.title" : { "message" : "První" },
+	"mailmerge.message.previous" : { "message" : "<" },
+	"mailmerge.message.previous.title" : { "message" : "Předchozí" },
+	"mailmerge.message.next" : { "message" : ">" },
+	"mailmerge.message.next.title" : { "message" : "Další" },
+	"mailmerge.message.end" : { "message" : ">>" },
+	"mailmerge.message.end.title" : { "message" : "Poslední" },
+	
+	"mailmerge.send" : { "message" : "Odeslat" },
+	
+	"mailmerge.send.current" : { "message" : "Aktuální:" },
+	"mailmerge.send.total" : { "message" : "Celkem:" },
+	"mailmerge.send.time" : { "message" : "Čas:" },
+	
+	"mailmerge.send.start" : { "message" : "Start" },
+	"mailmerge.send.start.title" : { "message" : "Start" },
+	
+	"mailmerge.options" : { "message" : "Možnosti" },
+	
+	"mailmerge.options.legend.options" : { "message" : "Možnosti" },
+	
+	"mailmerge.options.saveastemplate" : { "message" : "Uložit jako šablonu:" },
+	"mailmerge.options.recipientsreminder" : { "message" : "Upozornění na příjemce:" },
+	"mailmerge.options.variablesreminder" : { "message" : "Upozornění na proměnné:" },
+	
+	"mailmerge.options.legend.beta" : { "message" : "Beta" },
+	
+	"mailmerge.options.beta" : { "message" : "Beta:" },
+	
+	"mailmerge.options.load" : { "message" : "Načíst" },
+	"mailmerge.options.load.title" : { "message" : "Načíst nastavení" },
+	"mailmerge.options.reset" : { "message" : "Obnovit" },
+	"mailmerge.options.reset.title" : { "message" : "Obnovit nastavení" },
+	"mailmerge.options.save" : { "message" : "Uložit" },
+	"mailmerge.options.save.title" : { "message" : "Uložit nastavení" },
+	
+	"mailmerge.betawarning.title" : { "message" : "Beta Warning" },
+	"mailmerge.betawarning.message" : { "message" : "Use \"Beta\" at your own risk!" },
+	
+	"mailmerge.encryptionwarning.title" : { "message" : "Varování o šifrování" },
+	"mailmerge.encryptionwarning.message" : { "message" : "Mail Merge nepodporuje šifrování nebo podepisování zpráv pomocí OpenPGP nebo S/MIME!\n\nJednotlivé invidualizované zprávy vytvořené pomocí Mail Merge nebudou zašifrovány nebo podepsány." },
+	
+	"mailmerge.delivermodewarning.title" : { "message" : "Varování ohledně typu doručení" },
+	"mailmerge.delivermodewarning.message" : { "message" : "\"Odeslat nyní\" použijte jako \"Režim doručení\" na vlastní nebezpečí!\n\nJe velmi doporučeno, abyste použili \"Režim doručení\" \"Odeslat později\" a abyste jednotlivé přizpůsobené zprávy ve složce \"Místní složky -> Pošta k odeslání\" před odesláním ručně zkontrolovali. K chybám v Thunderbirdu, Mail Merge, i dalších doplňcích dochází a může to potenciálně vést k nežádoucím výsledkům." },
+	
+	"mailmerge.recipientsreminder.title" : { "message" : "Upozornění na příjemce" },
+	"mailmerge.recipientsreminder.message" : { "message" : "Zpráva obsahuje vícero příjemců.\n\n\"Upozornění na příjemce\" by vám mělo zabránit omylem kliknout na \"Odeslat nyní\", nebo \"Odeslat později\". Pokud chcete použít Mail Merge, klikněte na \"Zrušit\" a buď použijte položku \"Nástroje -> Mail Merge\", nebo tlačítko \"Mail Merge\" na panelu nástrojů." },
+	
+	"mailmerge.variablesreminder.title" : { "message" : "Upozornění na proměnné" },
+	"mailmerge.variablesreminder.message" : { "message" : "Zpráva obsahuje proměnné.\n\n\"Upozornění na proměnné\" by vám mělo zabránit omylem kliknout na \"Odeslat nyní\", nebo \"Odeslat později\". Pokud chcete použít Mail Merge, klikněte na \"Zrušit\" a buď použijte položku \"Nástroje -> Mail Merge\", nebo tlačítko \"Mail Merge\" na panelu nástrojů." },
+	
+	"mailmerge.notifications.finished" : { "message" : "Mail Merge je hotov.\nBylo vytvořeno $1 zpráv v $2." }
+	
+}
