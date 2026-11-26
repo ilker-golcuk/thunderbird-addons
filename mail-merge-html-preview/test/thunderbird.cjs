@@ -71,7 +71,8 @@ class Thunderbird {
 
 		let process_ = spawn(process.env.THUNDERBIRD_PATH || "/Applications/Thunderbird.app/Contents/MacOS/thunderbird",
 			["--headless", "--no-remote", "--profile", profile, "--remote-debugging-port", "0", "--remote-allow-system-access"],
-			{ env: { ...process.env, HOME: home, CFFIXED_USER_HOME: home } });
+			// Newer Thunderbird (seen on 161) also needs this variable before BiDi reaches chrome windows.
+			{ env: { ...process.env, HOME: home, CFFIXED_USER_HOME: home, MOZ_REMOTE_ALLOW_SYSTEM_ACCESS: "1" } });
 		let endpoint = await new Promise((resolve, reject) => {
 			let output = "";
 			let listen = (data) => {

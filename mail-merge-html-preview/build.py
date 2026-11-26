@@ -23,6 +23,11 @@ MAIL_MERGE_11_6_1 = {
 MAIL_MERGE_DIALOG_SEND_ONWARD = 'd62afe78487943de98220ce5bc6aa6f4bbbab678a2b3c4a0f9c0c8209000a389'
 # manifest.json keys: applications, background, permissions, experiment_apis, compose_action, commands.
 MAIL_MERGE_MANIFEST_KEYS = '247de27378decea5770d17f72e661e37e5574df605065a075096806b6bf72e1f'
+# Mail Merge 11.6.1 shipped with strict_max_version 158.*. addons.thunderbird.net later raised
+# its supported range to 162.* with no code change, so this build declares 162.*; the
+# fingerprint above is checked against the manifest with the shipped value put back.
+MAIL_MERGE_SHIPPED_MAX_VERSION = '158.*'
+MAIL_MERGE_MAX_VERSION = '162.*'
 
 sha256 = lambda data: hashlib.sha256(data).hexdigest()
 
@@ -35,7 +40,10 @@ for path, digest in MAIL_MERGE_11_6_1.items():
 dialog = (addon / 'content/dialog.js').read_bytes()
 assert sha256(dialog[dialog.index(b'\n\tsend: {'):]) == MAIL_MERGE_DIALOG_SEND_ONWARD, 'dialog.js send section'
 keys = ['applications', 'background', 'permissions', 'experiment_apis', 'compose_action', 'commands']
-assert sha256(json.dumps({key: manifest[key] for key in keys}, sort_keys=True).encode()) == MAIL_MERGE_MANIFEST_KEYS, 'manifest.json'
+shipped = json.loads(json.dumps({key: manifest[key] for key in keys}))
+assert shipped['applications']['gecko']['strict_max_version'] == MAIL_MERGE_MAX_VERSION, 'manifest.json strict_max_version'
+shipped['applications']['gecko']['strict_max_version'] = MAIL_MERGE_SHIPPED_MAX_VERSION
+assert sha256(json.dumps(shipped, sort_keys=True).encode()) == MAIL_MERGE_MANIFEST_KEYS, 'manifest.json'
 print('Verified: permissions, experiment API, background, options and all merge/send code match Mail Merge 11.6.1.')
 
 dist = root / 'dist'

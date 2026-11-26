@@ -82,7 +82,7 @@ Texts are in English and Turkish; other languages fall back to English.
 | `content/html-preview.js` | The preview: builds, cleans and renders each message and runs the field check. |
 | `content/dialog.html`, `content/style.css` | Mail Merge's dialog. The Message tab holds the preview frame, its toolbar and the "1 / N" counter. |
 | `content/dialog.js` | Mail Merge's dialog logic. Its Message tab section hands each merged message to the preview. |
-| `manifest.json`, `_locales/` | Name "Mail Merge (HTML Preview)", version 11.6.1.3. English and Turkish texts for the preview. |
+| `manifest.json`, `_locales/` | Name "Mail Merge (HTML Preview)", version 11.6.1.4. English and Turkish texts for the preview. |
 | `THIRD-PARTY-NOTICES.txt` | Licenses and attributions of Mail Merge, SheetJS and Font Awesome. |
 | everything else | Mail Merge 11.6.1 as published. |
 
@@ -106,7 +106,7 @@ The preview never changes the message that gets sent.
 
 To go back to the original, install Mail Merge again from [addons.thunderbird.net](https://addons.thunderbird.net/addon/mail-merge/).
 
-Requires Thunderbird 128–158, the same range as Mail Merge 11.6.1. Tested on Thunderbird 157.0.1 on macOS.
+Requires Thunderbird 128–162, the range addons.thunderbird.net gives Mail Merge 11.6.1 (raised from 128–158 without a code change). Tested on Thunderbird 157.0.1 and 161.0 on macOS.
 
 ## Build and test
 
