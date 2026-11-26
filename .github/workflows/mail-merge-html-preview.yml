@@ -39,7 +39,7 @@ env:
 jobs:
   follow:
     runs-on: macos-latest
-    timeout-minutes: 45
+    timeout-minutes: 75
     steps:
       - uses: actions/checkout@v4
 
@@ -67,6 +67,9 @@ jobs:
         run: python3 build.py
 
       - name: Test in Thunderbird ${{ steps.thunderbird.outputs.version }}
+        timeout-minutes: 35
+        env:
+          TB_TRACE: "1"
         run: |
           npm run test:thunderbird
           npm run test:update
@@ -116,7 +119,7 @@ jobs:
           fi
 
       - name: Open an issue if the check failed
-        if: failure()
+        if: failure() || (cancelled() && github.event_name == 'schedule')
         env:
           TESTED: ${{ steps.thunderbird.outputs.version }}
           RUN: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}

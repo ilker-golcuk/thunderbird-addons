@@ -9,6 +9,10 @@ const { spawn } = require("node:child_process");
 
 const UUID = "7d1b0c2e-5a3f-4c8e-9b6d-2f4e8a1c3b5d";
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+const started = Date.now();
+// TB_TRACE=1 prints every WebDriver BiDi call, so a run that stops shows where.
+const trace = (...args) => { if (process.env.TB_TRACE) { console.error(`[tb +${((Date.now() - started) / 1000).toFixed(1)}s]`, ...args); } };
+const timeout = (ms, label) => new Promise((resolve, reject) => setTimeout(() => reject(new Error("Timed out after " + ms / 1000 + " s: " + label)), ms).unref());
 
 class Thunderbird {
 
@@ -49,21 +53,38 @@ class Thunderbird {
 			["--headless", "--no-remote", "--profile", profile, "--remote-debugging-port", "0", "--remote-allow-system-access"],
 			// Newer Thunderbird (seen on 161) also needs this variable before BiDi reaches chrome windows.
 			{ env: { ...process.env, HOME: home, CFFIXED_USER_HOME: home, MOZ_REMOTE_ALLOW_SYSTEM_ACCESS: "1" } });
-		let endpoint = await new Promise((resolve, reject) => {
-			let output = "";
-			let listen = (data) => {
-				output += data;
-				let match = output.match(/WebDriver BiDi listening on (ws:\/\/\S+)/);
-				if (match) { resolve(match[1]); }
-			};
-			process_.stdout.on("data", listen);
-			process_.stderr.on("data", listen);
-			setTimeout(() => reject(new Error("Thunderbird did not start: " + output)), 60000);
-		});
+		// Thunderbird's own output is kept (last 20 kB) for diagnose().
+		let output = { text: "" };
+		let keep = (data) => { output.text = (output.text + data).slice(-20000); };
+		process_.stdout.on("data", keep);
+		process_.stderr.on("data", keep);
+		trace("started", process_.pid);
+		let endpoint = await Promise.race([
+			new Promise(resolve => {
+				let listen = () => {
+					let match = output.text.match(/WebDriver BiDi listening on (ws:\/\/\S+)/);
+					if (match) { process_.stdout.off("data", listen); process_.stderr.off("data", listen); resolve(match[1]); }
+				};
+				process_.stdout.on("data", listen);
+				process_.stderr.on("data", listen);
+			}),
+			new Promise((resolve, reject) => setTimeout(() => {
+				process_.kill("SIGKILL");
+				reject(new Error("Thunderbird did not start within 90 s. Its output:\n" + output.text));
+			}, 90000).unref()),
+		]);
+		trace("BiDi", endpoint);
 
 		let thunderbird = new Thunderbird(process_, new WebSocket(endpoint + "/session"));
 		thunderbird.home = home;
-		await new Promise(resolve => thunderbird.socket.addEventListener("open", resolve));
+		thunderbird.output = output;
+		await Promise.race([
+			new Promise((resolve, reject) => {
+				thunderbird.socket.addEventListener("open", resolve);
+				thunderbird.socket.addEventListener("error", () => reject(new Error("WebDriver BiDi connection failed")));
+			}),
+			timeout(30000, "WebDriver BiDi connection"),
+		]);
 		await thunderbird.send("session.new", { capabilities: {} });
 		return thunderbird;
 
@@ -81,7 +102,24 @@ class Thunderbird {
 		});
 	}
 
-	send(method, params = {}) {
+	// Every call has a time limit, so a Thunderbird that stops answering fails the test instead of hanging it.
+	send(method, params = {}, ms = 120000) {
+		trace(method, params.expression ? params.expression.replace(/\s+/g, " ").slice(0, 100) : "");
+		return Promise.race([this.sendNow(method, params), timeout(ms, method + (params.expression ? " " + params.expression.replace(/\s+/g, " ").slice(0, 200) : ""))]);
+	}
+
+	// Prints the open Thunderbird windows and Thunderbird's last output; for failed runs.
+	async diagnose() {
+		try {
+			let { contexts } = await Promise.race([this.sendNow("browsingContext.getTree", { "moz:scope": "chrome" }), timeout(10000, "window list")]);
+			console.error("Open Thunderbird windows:\n" + contexts.map(context => "  " + context.url).join("\n"));
+		} catch(e) {
+			console.error("Open Thunderbird windows: unknown (" + e.message + ")");
+		}
+		console.error("Thunderbird output (last 4 kB):\n" + (this.output?.text ?? "").slice(-4000));
+	}
+
+	sendNow(method, params = {}) {
 		return new Promise((resolve, reject) => {
 			let id = ++this.id;
 			this.pending.set(id, message => (message.type === "error") ? reject(new Error(method + ": " + message.error + " " + message.message)) : resolve(message.result));
@@ -160,10 +198,22 @@ class Thunderbird {
 		this.socket.close();
 		let exited = new Promise(resolve => this.process.once("exit", resolve));
 		this.process.kill();
-		await exited;
+		if (await Promise.race([exited.then(() => true), sleep(10000).then(() => false)]) === false) {
+			this.process.kill("SIGKILL");
+			await exited;
+		}
 		try { fs.rmSync(this.home, { recursive: true, force: true }); } catch(e) {}
 	}
 
 }
 
-module.exports = { Thunderbird, sleep };
+// Ends a test run that goes on longer than ms, after printing what Thunderbird was doing.
+function watchdog(ms, thunderbird) {
+	setTimeout(async () => {
+		console.error("Test still running after " + ms / 1000 + " s.");
+		await thunderbird()?.diagnose();
+		process.exit(1);
+	}, ms).unref();
+}
+
+module.exports = { Thunderbird, sleep, watchdog };

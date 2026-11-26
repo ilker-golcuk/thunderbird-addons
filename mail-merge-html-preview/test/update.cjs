@@ -16,7 +16,7 @@ const http = require("node:http");
 const os = require("node:os");
 const path = require("node:path");
 const { execFileSync } = require("node:child_process");
-const { Thunderbird, sleep } = require("./thunderbird-app.cjs");
+const { Thunderbird, sleep, watchdog } = require("./thunderbird-app.cjs");
 
 const root = path.join(__dirname, "..");
 const ID = "mailmerge@example.net";
@@ -80,7 +80,9 @@ async function waitFor(fn, label, ms = 60000) {
 		prefs["extensions.checkUpdateSecurity"] = false;
 	}
 
-	let thunderbird = await Thunderbird.start(prefs);
+	let thunderbird;
+	watchdog(15 * 60000, () => thunderbird);
+	thunderbird = await Thunderbird.start(prefs);
 
 	try {
 
@@ -141,6 +143,9 @@ async function waitFor(fn, label, ms = 60000) {
 			console.log(`PASS Thunderbird ${appVersion}: found ${expected} through updates.json, waited while a compose window was open, then updated ${manifest.version} → ${after.version} by itself and kept it active.`);
 		}
 
+	} catch (error) {
+		await thunderbird.diagnose();
+		throw error;
 	} finally {
 		await thunderbird.close();
 		server?.close();

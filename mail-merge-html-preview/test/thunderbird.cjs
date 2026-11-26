@@ -13,7 +13,7 @@ const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const http = require("node:http");
 const path = require("node:path");
-const { Thunderbird, sleep } = require("./thunderbird-app.cjs");
+const { Thunderbird, sleep, watchdog } = require("./thunderbird-app.cjs");
 
 const root = path.join(__dirname, "..");
 const dist = path.join(root, "dist");
@@ -46,7 +46,9 @@ const near = (actual, expected, label) => assert.ok(actual.every((value, i) => M
 	await new Promise(resolve => server.listen(0, "127.0.0.1", resolve));
 	let origin = "http://127.0.0.1:" + server.address().port;
 
-	let thunderbird = await Thunderbird.start();
+	let thunderbird;
+	watchdog(15 * 60000, () => thunderbird);
+	thunderbird = await Thunderbird.start();
 
 	try {
 
@@ -187,6 +189,9 @@ const near = (actual, expected, label) => assert.ok(actual.every((value, i) => M
 
 		console.log("PASS Thunderbird " + version + ": installs, opens from the compose window, previews CSV data with styles and body colors, field check, links, remote images on request, dark mode, and saves 3 merged drafts.");
 
+	} catch (error) {
+		await thunderbird.diagnose();
+		throw error;
 	} finally {
 		await thunderbird.close();
 		server.close();
