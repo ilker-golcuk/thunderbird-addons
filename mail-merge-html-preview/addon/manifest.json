@@ -1,7 +1,7 @@
 {
 	
 	"name": "Mail Merge (HTML Preview)",
-	"version": "11.6.1.4",
+	"version": "11.6.1.5",
 	"description": "Create and Save or Send Multiple Individual and Personalized Messages from a Draft (local rendered HTML preview customization)",
 	"author": "Alexander Bergmann",
 	
@@ -11,7 +11,8 @@
 		"gecko": {
 			"id": "mailmerge@example.net",
 			"strict_min_version": "128.0a1",
-			"strict_max_version": "162.*"
+			"strict_max_version": "162.*",
+			"update_url": "https://raw.githubusercontent.com/ilker-golcuk/thunderbird-addons/main/mail-merge-html-preview/updates.json"
 		}
 	},
 	

@@ -1,0 +1,127 @@
+# Keeps Mail Merge (HTML Preview) working on new Thunderbird releases.
+#
+# Every Monday it reads Mail Merge 11.6.1's supported Thunderbird range on addons.thunderbird.net
+# and tests the add-on in the newest Thunderbird release (macOS, throwaway profile).
+# - If that range was raised, it raises the add-on's range, publishes a new release and lists it
+#   in updates.json, where installed copies find it (Thunderbird checks about once a day).
+# - If Mail Merge has a newer release, or a test fails, it opens an issue and releases nothing.
+name: Mail Merge (HTML Preview) - follow Thunderbird
+
+on:
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Check and test only; commit and release nothing"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: mail-merge-html-preview
+  cancel-in-progress: false
+
+defaults:
+  run:
+    working-directory: mail-merge-html-preview
+
+env:
+  GH_TOKEN: ${{ github.token }}
+  GIT_AUTHOR_NAME: ilker
+  GIT_AUTHOR_EMAIL: 129103092+ilker-golcuk@users.noreply.github.com
+  GIT_COMMITTER_NAME: ilker
+  GIT_COMMITTER_EMAIL: 129103092+ilker-golcuk@users.noreply.github.com
+
+jobs:
+  follow:
+    runs-on: macos-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Read Mail Merge's range on addons.thunderbird.net
+        id: check
+        run: python3 tools/follow_mail_merge.py --apply
+
+      - name: Install the newest Thunderbird release
+        id: thunderbird
+        run: |
+          curl -fsSL -o "$RUNNER_TEMP/thunderbird.dmg" "https://download.mozilla.org/?product=thunderbird-latest-SSL&os=osx&lang=en-US"
+          hdiutil attach -nobrowse -readonly -mountpoint "$RUNNER_TEMP/tb" "$RUNNER_TEMP/thunderbird.dmg"
+          cp -R "$RUNNER_TEMP/tb/Thunderbird.app" "$RUNNER_TEMP/"
+          hdiutil detach "$RUNNER_TEMP/tb"
+          echo "THUNDERBIRD_PATH=$RUNNER_TEMP/Thunderbird.app/Contents/MacOS/thunderbird" >> "$GITHUB_ENV"
+          echo "version=$(defaults read "$RUNNER_TEMP/Thunderbird.app/Contents/Info.plist" CFBundleShortVersionString)" >> "$GITHUB_OUTPUT"
+
+      - run: npm ci
+
+      - name: Build
+        run: python3 build.py
+
+      - name: Test in Thunderbird ${{ steps.thunderbird.outputs.version }}
+        run: |
+          npm run test:thunderbird
+          npm run test:update
+
+      - name: Release ${{ steps.check.outputs.version }}
+        id: release
+        if: steps.check.outputs.bump == 'true' && !(github.event_name == 'workflow_dispatch' && inputs.dry_run)
+        env:
+          VERSION: ${{ steps.check.outputs.version }}
+          MAX: ${{ steps.check.outputs.atn_max }}
+          TESTED: ${{ steps.thunderbird.outputs.version }}
+        run: |
+          RANGE="128–${MAX%%.*}"
+          git add addon/manifest.json build.py README.md
+          git commit -m "Mail Merge (HTML Preview) $VERSION: support Thunderbird $RANGE" -m "addons.thunderbird.net now lists Mail Merge 11.6.1 for Thunderbird $RANGE with no code change, so strict_max_version is raised to $MAX. Tested on Thunderbird $TESTED (macOS)."
+          git push origin HEAD:main
+          cat > "$RUNNER_TEMP/notes.md" <<NOTES
+          **Mail Merge (HTML Preview) $VERSION** supports **Thunderbird $RANGE**, the range [addons.thunderbird.net](https://addons.thunderbird.net/addon/mail-merge/) now gives Mail Merge 11.6.1. No code changed.
+
+          Installed copies update to this version by themselves. To install it by hand: In Thunderbird, open **Add-ons and Themes → Extensions → ⚙ → Install Add-on From File…** and choose the \`.xpi\` file.
+
+          Tested on Thunderbird $TESTED (macOS). See the [README](https://github.com/ilker-golcuk/thunderbird-addons/tree/main/mail-merge-html-preview) for details.
+
+          Not an official Mail Merge release. GPL-3.0; bundled SheetJS (Apache-2.0) and Font Awesome icons (CC BY 4.0) are listed in \`THIRD-PARTY-NOTICES.txt\` inside the package.
+          NOTES
+          gh release create "mail-merge-html-preview-v$VERSION" "dist/mail-merge-html-preview-$VERSION.xpi" --target "$(git rev-parse HEAD)" --title "Mail Merge (HTML Preview) $VERSION" --notes-file "$RUNNER_TEMP/notes.md" --latest
+          python3 build.py --update-manifest
+          git add updates.json
+          git commit -m "List Mail Merge (HTML Preview) $VERSION in updates.json"
+          git push origin HEAD:main
+
+      - name: Check the real update channel
+        if: steps.release.outcome == 'success'
+        run: |
+          sleep 300  # raw.githubusercontent.com caches files for up to 5 minutes
+          npm run test:update -- --live
+
+      - name: Open an issue for a newer Mail Merge
+        if: steps.check.outputs.newer_mail_merge != ''
+        env:
+          NEWER: ${{ steps.check.outputs.newer_mail_merge }}
+          NEWER_MAX: ${{ steps.check.outputs.newer_mail_merge_max }}
+        run: |
+          title="Mail Merge $NEWER is out"
+          if [ -z "$(gh issue list --state open --search "in:title \"$title\"" --json number --jq '.[].number')" ]; then
+            gh issue create --title "$title" --body "Mail Merge $NEWER is on [addons.thunderbird.net](https://addons.thunderbird.net/addon/mail-merge/) (Thunderbird up to $NEWER_MAX). This add-on is built on Mail Merge 11.6.1, so its code changes do not reach installed copies until the preview is moved onto $NEWER by hand. Until then, this add-on keeps following 11.6.1's range."
+          fi
+
+      - name: Open an issue if the check failed
+        if: failure()
+        env:
+          TESTED: ${{ steps.thunderbird.outputs.version }}
+          RUN: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          title="Automatic Thunderbird check failed"
+          number="$(gh issue list --state open --search "in:title \"$title\"" --json number --jq '.[0].number // empty')"
+          body="The weekly check failed on Thunderbird ${TESTED:-unknown}. Nothing was released. Details: $RUN"
+          if [ -n "$number" ]; then gh issue comment "$number" --body "$body"; else gh issue create --title "$title" --body "$body"; fi

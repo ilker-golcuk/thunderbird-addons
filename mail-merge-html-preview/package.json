@@ -7,7 +7,8 @@
     "build": "python3 build.py",
     "test": "node test/preview.cjs",
     "test:thunderbird": "node test/thunderbird.cjs",
-    "screenshots": "node test/preview.cjs --screenshots && node test/thunderbird.cjs --screenshots"
+    "screenshots": "node test/preview.cjs --screenshots && node test/thunderbird.cjs --screenshots",
+    "test:update": "node test/update.cjs"
   },
   "devDependencies": {
     "puppeteer-core": "^25.12.0"

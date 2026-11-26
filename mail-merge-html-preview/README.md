@@ -82,7 +82,8 @@ Texts are in English and Turkish; other languages fall back to English.
 | `content/html-preview.js` | The preview: builds, cleans and renders each message and runs the field check. |
 | `content/dialog.html`, `content/style.css` | Mail Merge's dialog. The Message tab holds the preview frame, its toolbar and the "1 / N" counter. |
 | `content/dialog.js` | Mail Merge's dialog logic. Its Message tab section hands each merged message to the preview. |
-| `manifest.json`, `_locales/` | Name "Mail Merge (HTML Preview)", version 11.6.1.4. English and Turkish texts for the preview. |
+| `manifest.json`, `_locales/` | Name "Mail Merge (HTML Preview)", its version and update address. English and Turkish texts for the preview. |
+| `updates.json` (next to `addon/`) | The update list Thunderbird reads (see [Updates](#updates)). |
 | `THIRD-PARTY-NOTICES.txt` | Licenses and attributions of Mail Merge, SheetJS and Font Awesome. |
 | everything else | Mail Merge 11.6.1 as published. |
 
@@ -102,11 +103,22 @@ The preview never changes the message that gets sent.
 
 1. Download `mail-merge-html-preview-<version>.xpi` from [Releases](https://github.com/ilker-golcuk/thunderbird-addons/releases).
 2. In Thunderbird open **Add-ons and Themes → Extensions → ⚙ → Install Add-on From File…** and pick the file. Close any open Mail Merge window first.
-3. Open the add-on's details and set **Allow automatic updates** to **Off**. Otherwise the next official Mail Merge update replaces this build and the preview goes back to HTML source.
+
+Leave **Allow automatic updates** on. From 11.6.1.5 on, the add-on gets its updates from this repository, not from addons.thunderbird.net, so an official Mail Merge update no longer replaces it. If you installed 11.6.1.4 or older, install the newest release once by hand.
 
 To go back to the original, install Mail Merge again from [addons.thunderbird.net](https://addons.thunderbird.net/addon/mail-merge/).
 
-Requires Thunderbird 128–162, the range addons.thunderbird.net gives Mail Merge 11.6.1 (raised from 128–158 without a code change). Tested on Thunderbird 157.0.1 and 161.0 on macOS.
+Requires Thunderbird 128–162, the range addons.thunderbird.net gives Mail Merge 11.6.1 (raised from 128–158 without a code change). Each release's notes say which Thunderbird it was tested on.
+
+## Updates
+
+Installed copies keep working on new Thunderbird releases without being reinstalled:
+
+- **Update address.** `manifest.json` sets `update_url` to [`updates.json`](updates.json) in this repository. Thunderbird reads it about once a day, downloads a newer version from its GitHub release and checks its SHA-256. While a compose window is open, Mail Merge waits until it is closed before updating, so a running merge is not interrupted.
+- **Weekly check.** Every Monday, the [workflow](../.github/workflows/mail-merge-html-preview.yml) reads Mail Merge 11.6.1's Thunderbird range on addons.thunderbird.net, where its author raises it after checking new Thunderbird versions. It then tests the add-on in the newest Thunderbird release. If the range went up and the tests pass, it raises this add-on's range, publishes a release and lists it in `updates.json`.
+- **When it stops and asks.** If Mail Merge publishes a newer release, its code changed and the preview has to be moved onto it by hand, so the workflow opens an issue instead. It also opens one if a test fails. Nothing is released in either case.
+
+The workflow can also be started by hand from the **Actions** tab; by default that run only checks and tests.
 
 ## Build and test
 
@@ -115,6 +127,8 @@ npm install                 # puppeteer-core only; no browser is downloaded
 npm run build               # → dist/mail-merge-html-preview-<version>.xpi
 npm test                    # Firefox (+ Chromium if present), light and dark mode
 npm run test:thunderbird    # end to end in a real Thunderbird
+npm run test:update         # Thunderbird updates the add-on by itself through updates.json
+python3 tools/follow_mail_merge.py   # compare the range with addons.thunderbird.net
 ```
 
 - **`npm test`** loads the real `dialog.html`, `style.css`, `dialog.js` and `html-preview.js` into a page. It uses Mail Merge's real field substitution. It runs in Firefox 157, which shares its Gecko engine with Thunderbird 157, and in Chromium. It checks:
@@ -134,6 +148,7 @@ npm run test:thunderbird    # end to end in a real Thunderbird
   4. runs a real merge into *Local Folders/Drafts*
 
   Thunderbird's WebDriver BiDi only reaches its own windows, so this test drives the add-on page through a frame script. A future Thunderbird may need changes to the test.
+- **`npm run test:update`** installs the add-on from a file, as a user does, with a local update address. A local server offers the next version through `updates.json`. The test checks that Thunderbird waits while a compose window is open, then updates by itself and keeps the add-on active. **`npm run test:update -- --live`** checks the real channel: it installs the add-on as version 0.1 with the real `update_url` and expects the newest version on GitHub.
 
 Paths default to macOS app locations. `FIREFOX_PATH`, `CHROME_PATH` and `THUNDERBIRD_PATH` override them.
 
@@ -158,3 +173,5 @@ Bu eklenti, Alexander Bergmann'ın Thunderbird eklentisi **Mail Merge 11.6.1** �
 Bu sürüm iletiyi alıcının göreceği biçimde, güvenli ve yalıtılmış bir çerçevede gösterir. Ayrıca veride olmayan, boş kalan ya da yerine konamayan alanları gönderimden önce uyarır.
 
 Önizleme tasarımında **MailMergeP**'den (siefkenj) fikir alınmış, kod alınmamıştır. Şablon dili, veri kaynakları ve gönderim Mail Merge 11.6.1'deki gibi çalışır.
+
+**Güncellemeler.** 11.6.1.5'ten itibaren eklenti güncellemelerini addons.thunderbird.net'ten değil bu depodan alır; otomatik güncelleme açık kalabilir. Her pazartesi bir GitHub Action, Mail Merge 11.6.1'in addons.thunderbird.net'teki Thunderbird aralığını okur ve eklentiyi en yeni Thunderbird'de test eder. Aralık yükselmişse ve testler geçerse yeni sürümü kendiliğinden yayımlar; kurulu eklentiler bunu bir gün içinde alır. Mail Merge'ün yeni bir sürümü çıkarsa ya da bir test başarısız olursa hiçbir şey yayımlamaz, bunun yerine depoda bir issue açar.
