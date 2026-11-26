@@ -1,0 +1,19 @@
+{
+  "addons": {
+    "mailmerge@example.net": {
+      "updates": [
+        {
+          "version": "11.6.1.5",
+          "update_link": "https://github.com/ilker-golcuk/thunderbird-addons/releases/download/mail-merge-html-preview-v11.6.1.5/mail-merge-html-preview-11.6.1.5.xpi",
+          "update_hash": "sha256:bdf43ee532cb10cbadeb36ec2deba29c257f4c91b5aa11147c30ec6bb5359ed7",
+          "applications": {
+            "gecko": {
+              "strict_min_version": "128.0a1",
+              "strict_max_version": "162.*"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
