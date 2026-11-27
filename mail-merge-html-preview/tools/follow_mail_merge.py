@@ -8,11 +8,11 @@ is built on (build.MAIL_MERGE_VERSION) with manifest.json:
 - If addons.thunderbird.net allows a newer Thunderbird, --apply raises strict_max_version
   in manifest.json, build.py and README.md, and bumps the add-on version (11.6.1.5 -> 11.6.1.6).
 - If Mail Merge has a newer release, its code changed and the preview has to be moved onto
-  it by hand; the result says so, and the GitHub workflow opens an issue.
+  it by hand; the result says so (newer_mail_merge).
 
     python3 tools/follow_mail_merge.py [--apply] [--atn-json versions.json]
 
-Results are printed as key=value lines and, on GitHub Actions, written to $GITHUB_OUTPUT.
+Results are printed as key=value lines (also written to $GITHUB_OUTPUT when it is set).
 """
 from pathlib import Path
 import argparse

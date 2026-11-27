@@ -112,13 +112,17 @@ Requires Thunderbird 128–162, the range addons.thunderbird.net gives Mail Merg
 
 ## Updates
 
-Installed copies keep working on new Thunderbird releases without being reinstalled:
+`manifest.json` sets `update_url` to [`updates.json`](updates.json) in this repository. Thunderbird reads it about once a day, downloads a newer version from its GitHub release and checks its SHA-256. While a compose window is open, Mail Merge waits until it is closed before updating, so a running merge is not interrupted.
 
-- **Update address.** `manifest.json` sets `update_url` to [`updates.json`](updates.json) in this repository. Thunderbird reads it about once a day, downloads a newer version from its GitHub release and checks its SHA-256. While a compose window is open, Mail Merge waits until it is closed before updating, so a running merge is not interrupted.
-- **Weekly check.** Every Monday, the [workflow](../.github/workflows/mail-merge-html-preview.yml) reads Mail Merge 11.6.1's Thunderbird range on addons.thunderbird.net, where its author raises it after checking new Thunderbird versions. It then tests the add-on in the newest Thunderbird release. If the range went up and the tests pass, it raises this add-on's range, publishes a release and lists it in `updates.json`.
-- **When it stops and asks.** If Mail Merge publishes a newer release, its code changed and the preview has to be moved onto it by hand, so the workflow opens an issue instead. It also opens one if a test fails. Nothing is released in either case.
+When a new Thunderbird is out of range, check whether addons.thunderbird.net has raised Mail Merge 11.6.1's range, then publish a new version:
 
-The workflow can also be started by hand from the **Actions** tab; by default that run only checks and tests.
+```bash
+python3 tools/follow_mail_merge.py --apply   # raises the range and the version if addons.thunderbird.net allows it
+python3 build.py                             # build and test it, commit, push, then create the GitHub release with the .xpi
+python3 build.py --update-manifest           # after the release exists: list it in updates.json, commit and push
+```
+
+If Mail Merge has a newer release instead, its code changed and the preview has to be moved onto it by hand.
 
 ## Build and test
 
@@ -174,4 +178,4 @@ Bu sürüm iletiyi alıcının göreceği biçimde, güvenli ve yalıtılmış b
 
 Önizleme tasarımında **MailMergeP**'den (siefkenj) fikir alınmış, kod alınmamıştır. Şablon dili, veri kaynakları ve gönderim Mail Merge 11.6.1'deki gibi çalışır.
 
-**Güncellemeler.** 11.6.1.5'ten itibaren eklenti güncellemelerini addons.thunderbird.net'ten değil bu depodan alır; otomatik güncelleme açık kalabilir. Her pazartesi bir GitHub Action, Mail Merge 11.6.1'in addons.thunderbird.net'teki Thunderbird aralığını okur ve eklentiyi en yeni Thunderbird'de test eder. Aralık yükselmişse ve testler geçerse yeni sürümü kendiliğinden yayımlar; kurulu eklentiler bunu bir gün içinde alır. Mail Merge'ün yeni bir sürümü çıkarsa ya da bir test başarısız olursa hiçbir şey yayımlamaz, bunun yerine depoda bir issue açar.
+**Güncellemeler.** 11.6.1.5'ten itibaren eklenti güncellemelerini addons.thunderbird.net'ten değil bu depodan alır; otomatik güncelleme açık kalabilir. Bu depoda yeni bir sürüm yayımlandığında kurulu eklentiler onu bir gün içinde kendiliğinden alır. Yeni bir Thunderbird sürümü desteklenen aralığın dışına çıkarsa, aralık yukarıdaki **Updates** bölümündeki adımlarla elle yükseltilir.
